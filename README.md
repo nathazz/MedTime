@@ -1,4 +1,4 @@
-# MedTime - Lembrete de Medicamentos
+# MedTime - Lembrete de Medicamentos 💊📅
 
 ## Descrição do Projeto
 
