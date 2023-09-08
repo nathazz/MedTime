@@ -9,17 +9,17 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="58dp"
-        android:layout_height="43dp"
+        android:layout_width="45dp"
+        android:layout_height="31dp"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048"
-        app:srcCompat="@drawable/arrow"
-        android:importantForAccessibility="no"
-        />
+        app:layout_constraintVertical_bias="0.034"
+        app:srcCompat="@drawable/arrow" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -36,19 +36,20 @@
         app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.019" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="383dp"
-        android:layout_height="162dp"
+        android:id="@+id/card1"
+        android:layout_width="367dp"
+        android:layout_height="151dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="524dp"
         app:cardBackgroundColor="@color/azul_btn"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255"
         tools:ignore="TextSizeCheck">
 
         <ImageView
@@ -56,19 +57,19 @@
             android:layout_width="68dp"
             android:layout_height="59dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="62dp"
+            android:layout_marginTop="52dp"
             app:srcCompat="@drawable/capsula" />
 
         <TextView
             android:id="@+id/rivotril"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="16dp"
             android:letterSpacing="0.1"
             android:text="Rivotril"
             android:textColor="@color/verde_clr"
-            android:textSize="30sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
 
@@ -77,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="110dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="61dp"
             android:letterSpacing="0.1"
             android:text="2x por dia"
             android:textColor="@color/white"
@@ -89,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="110dp"
-            android:layout_marginTop="94dp"
+            android:layout_marginTop="88dp"
             android:letterSpacing="0.1"
             android:text="Tratamento diário"
             android:textColor="@color/azul_clr"
@@ -97,11 +98,11 @@
             tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/clock"
-            android:layout_width="23dp"
-            android:layout_height="24dp"
+            android:id="@+id/relogio"
+            android:layout_width="25dp"
+            android:layout_height="22dp"
             android:layout_marginStart="110dp"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="119dp"
             app:srcCompat="@drawable/clock" />
 
         <TextView
@@ -109,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="140dp"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="120dp"
             android:text="8:00"
             android:textColor="@color/white"
             tools:ignore="HardcodedText" />
@@ -120,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="175dp"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="120dp"
             android:text="12:00"
             android:textColor="@color/white"
             tools:ignore="HardcodedText" />
@@ -130,13 +131,155 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="218dp"
-            android:layout_marginTop="130dp"
+            android:layout_marginTop="120dp"
             android:text="21:00"
             android:textColor="@color/white"
             tools:ignore="HardcodedText" />
 
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/azul_btn"
+            android:contentDescription="no"
+            app:srcCompat="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="314dp"
+            android:layout_marginTop="65dp"
+            android:background="@color/azul_btn"
+            android:contentDescription="no"
+            app:srcCompat="@drawable/lixo" />
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="367dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/azul_btn"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515"
+        tools:ignore="TextSizeCheck">
+
+        <ImageView
+            android:id="@+id/gotas"
+            android:layout_width="68dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="52dp"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/gotas" />
+
+        <TextView
+            android:id="@+id/colirio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="16dp"
+            android:letterSpacing="0.1"
+            android:text="Colírio"
+            android:textColor="@color/verde_clr"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/frequencia2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="61dp"
+            android:letterSpacing="0.1"
+            android:text="2x por dia"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/data1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="88dp"
+            android:letterSpacing="0.1"
+            android:text="26jun"
+            android:textColor="@color/azul_clr"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/separaco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="88dp"
+            android:letterSpacing="0.1"
+            android:text=" - "
+            android:textColor="@color/azul_clr"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText"
+
+            />
+
+        <TextView
+            android:id="@+id/data2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="181dp"
+            android:layout_marginTop="88dp"
+            android:letterSpacing="0.1"
+            android:text="28 Aug"
+            android:textColor="@color/azul_clr"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText"
+
+            />
+
+        <ImageButton
+        android:id="@+id/edit2"
+        android:layout_width="52dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/azul_btn"
+        android:contentDescription="no"
+        app:srcCompat="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/delete2"
+            android:layout_width="48dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="314dp"
+            android:layout_marginTop="65dp"
+            android:background="@color/azul_btn"
+            android:contentDescription="no"
+            app:srcCompat="@drawable/lixo" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="68dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="@color/azul_btn"
+        android:contentDescription="no"
+        android:foreground="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
