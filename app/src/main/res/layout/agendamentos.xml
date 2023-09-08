@@ -215,9 +215,9 @@
             android:layout_marginStart="105dp"
             android:layout_marginTop="88dp"
             android:letterSpacing="0.1"
-            android:text="26jun"
+            android:text="26 jun"
             android:textColor="@color/azul_clr"
-            android:textSize="20sp"
+            android:textSize="19sp"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -243,7 +243,7 @@
             android:letterSpacing="0.1"
             android:text="28 Aug"
             android:textColor="@color/azul_clr"
-            android:textSize="20sp"
+            android:textSize="19sp"
             tools:ignore="HardcodedText"
 
             />
