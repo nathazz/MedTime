@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="45dp"
-        android:layout_height="31dp"
+        android:layout_width="40dp"
+        android:layout_height="27dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -271,15 +271,15 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="68dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="63dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="@color/azul_btn"
         android:contentDescription="no"
         android:foreground="@drawable/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent" />
 
 
