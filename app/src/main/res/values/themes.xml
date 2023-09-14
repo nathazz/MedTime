@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MedTime" parent="Theme.Material3.DayNight.NoActionBar">
 
-        <item name="android:statusBarColor">@color/azul_btn</item>
+        <item name="android:statusBarColor">@color/azul_escuro</item>
 
     </style>
 

@@ -5,5 +5,153 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D8D8D8"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nv_agnd"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_margin="28dp"
+        android:background="@drawable/bg_btn"
+        android:backgroundTint="@color/roxo"
+        android:drawableStart="@drawable/baseline_add_to_photos_24"
+        android:letterSpacing="0.1"
+        android:text="Novo agendamento"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_margin="28dp"
+        android:background="@drawable/bg_btn"
+        android:backgroundTint="@color/azul_btn"
+        android:drawableStart="@drawable/pilula2"
+        android:letterSpacing="0.1"
+        android:text="Medicamentos cadastrados"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nv_agnd"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_margin="28dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bg_btn"
+        android:backgroundTint="@color/azul_btn"
+        android:drawableStart="@drawable/baseline_checklist_24"
+        android:letterSpacing="0.1"
+        android:text="Meus agendamentos"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="243dp"
+        android:background="@drawable/fundo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="98dp"
+        android:layout_height="94dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.335"
+        app:srcCompat="@drawable/alarme" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="Seja bem vindo(a)"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.679" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="295dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pill"
+        android:contentDescription="no"
+        />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="336dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/container"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:letterSpacing="0.1"
+        android:text="Sua próxima medicação está \nagendado para"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.124" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
