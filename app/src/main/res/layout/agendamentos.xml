@@ -22,7 +22,7 @@
 
 
     <TextView
-        android:id="@+id/agendamentos"
+        android:id="@+id/txtAgend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
@@ -46,7 +46,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agendamentos"
+        app:layout_constraintTop_toBottomOf="@+id/txtAgend"
         app:layout_constraintVertical_bias="0.043"
         tools:ignore="TextSizeCheck">
 
@@ -127,7 +127,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageButton
-            android:id="@+id/edit"
+            android:id="@+id/editar"
             style="@style/editar"
             android:contentDescription="no"
             app:srcCompat="@drawable/edit" />
@@ -231,6 +231,7 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/adicionar"
         android:layout_width="63dp"
         android:layout_height="65dp"
         android:layout_marginBottom="56dp"
