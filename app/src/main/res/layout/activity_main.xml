@@ -12,8 +12,8 @@
         android:id="@+id/novoAgend"
         android:layout_width="match_parent"
         android:layout_height="73dp"
-        android:background="@drawable/bg_btn"
         android:layout_margin="28dp"
+        android:background="@drawable/bg_btn"
         android:backgroundTint="@color/roxo"
         android:drawableStart="@drawable/baseline_add_to_photos_24"
         android:letterSpacing="0.1"
@@ -24,9 +24,10 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/container"
-        app:layout_constraintVertical_bias="0.113" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/medsCadastrados"
@@ -41,9 +42,9 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="17sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/novoAgend"
         tools:ignore="HardcodedText" />
@@ -53,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="73dp"
         android:layout_margin="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/bg_btn"
         android:backgroundTint="@color/azul_btn"
         android:drawableStart="@drawable/baseline_checklist_24"
@@ -62,10 +63,13 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medsCadastrados" />
+        app:layout_constraintTop_toBottomOf="@+id/medsCadastrados"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/fundo"
@@ -108,10 +112,12 @@
         app:layout_constraintTop_toTopOf="@+id/fundo"
         app:layout_constraintVertical_bias="0.679" />
 
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="295dp"
         android:layout_height="200dp"
+        android:contentDescription="no"
         app:layout_constraintBottom_toBottomOf="@+id/fundo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -119,7 +125,6 @@
         app:layout_constraintTop_toTopOf="@+id/fundo"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/pill"
-        android:contentDescription="no"
         tools:ignore="HardcodedText" />
 
     <View
