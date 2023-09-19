@@ -10,7 +10,7 @@ class CadastrarMedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.medicamentos)
 
-
     }
+
 
 }
