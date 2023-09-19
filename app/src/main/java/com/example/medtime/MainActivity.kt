@@ -16,9 +16,8 @@ class MainActivity : AppCompatActivity() {
         val botao = findViewById<Button>(R.id.meusAgend)
 
         botao.setOnClickListener {
-            val intent = Intent(this, AgendamentoActivity::class.java)
-            startActivity(intent)
-
+            val intent1 = Intent(this, AgendamentoActivity::class.java)
+            startActivity(intent1)
         }
 
     }

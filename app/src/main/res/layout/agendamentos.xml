@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/flecha"
-        android:layout_width="40dp"
-        android:layout_height="27dp"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,132 +23,28 @@
 
     <TextView
         android:id="@+id/txtAgend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="242dp"
+        android:layout_height="78dp"
         android:layout_marginTop="17dp"
         android:letterSpacing="0.1"
         android:text="Agendamentos\nProgramados"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flecha"
-        app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
-        style="@style/card"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAgend"
-        app:layout_constraintVertical_bias="0.043"
-        tools:ignore="TextSizeCheck">
-
-        <ImageView
-            android:id="@+id/pilula"
-            style="@style/foto_med"
-            android:layout_width="65dp"
-            android:layout_height="71dp"
-            app:srcCompat="@drawable/capsula" />
-
-        <TextView
-            android:id="@+id/rivotril"
-            android:text="Rivotril"
-            style="@style/titulos_card"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/frequencia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="61dp"
-            android:letterSpacing="0.1"
-            android:text="2x por dia"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/tratamento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="88dp"
-            android:letterSpacing="0.1"
-            android:text="Tratamento diário"
-            android:textColor="@color/azul_clr"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText" />
-
-        <ImageView
-            android:id="@+id/relogio"
-            android:layout_width="25dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="119dp"
-            app:srcCompat="@drawable/clock" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="135dp"
-            android:layout_marginTop="120dp"
-            android:text="8:00"
-            android:textColor="@color/white"
-            tools:ignore="HardcodedText" />
-
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="170dp"
-            android:layout_marginTop="120dp"
-            android:text="12:00"
-            android:textColor="@color/white"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="217dp"
-            android:layout_marginTop="120dp"
-            android:text="21:00"
-            android:textColor="@color/white"
-            tools:ignore="HardcodedText" />
-
-        <ImageButton
-            android:id="@+id/editar"
-            style="@style/editar"
-            android:contentDescription="no"
-            app:srcCompat="@drawable/edit" />
-
-        <ImageButton
-            android:id="@+id/delete"
-            style="@style/apagar"
-            android:contentDescription="no"
-            app:srcCompat="@drawable/lixo" />
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card2"
         style="@style/card"
+        android:layout_marginTop="16dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card1"
-        app:layout_constraintVertical_bias="0.036"
         tools:ignore="TextSizeCheck">
 
         <ImageView
@@ -168,36 +64,36 @@
             android:id="@+id/frequencia2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="61dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="55dp"
             android:letterSpacing="0.1"
             android:text="2x por dia"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/data1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="105dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="82dp"
             android:letterSpacing="0.1"
             android:text="26 jun"
             android:textColor="@color/azul_clr"
-            android:textSize="19sp"
+            android:textSize="18sp"
             tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/separaco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="162dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="82dp"
             android:letterSpacing="0.1"
             android:text=" - "
             android:textColor="@color/azul_clr"
-            android:textSize="20sp"
+            android:textSize="18sp"
             tools:ignore="HardcodedText"
 
             />
@@ -206,12 +102,12 @@
             android:id="@+id/data2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="179dp"
-            android:layout_marginTop="88dp"
+            android:layout_marginStart="171dp"
+            android:layout_marginTop="82dp"
             android:letterSpacing="0.1"
             android:text="28 Aug"
             android:textColor="@color/azul_clr"
-            android:textSize="19sp"
+            android:textSize="18sp"
             tools:ignore="HardcodedText"
 
             />
@@ -232,8 +128,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/adicionar"
-        android:layout_width="63dp"
-        android:layout_height="65dp"
+        android:layout_width="60dp"
+        android:layout_height="59dp"
         android:layout_marginBottom="56dp"
         android:backgroundTint="@color/azul_btn"
         android:contentDescription="no"
@@ -242,6 +138,106 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        style="@style/card"
+        android:layout_width="341dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAgend"
+        tools:ignore="TextSizeCheck">
+
+        <ImageView
+            android:id="@+id/pilula"
+            style="@style/foto_med"
+            app:srcCompat="@drawable/capsula" />
+
+        <TextView
+            android:id="@+id/rivotril"
+            style="@style/titulos_card"
+            android:text="Rivotril"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/frequencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="48dp"
+            android:letterSpacing="0.1"
+            android:text="2x por dia"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tratamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="70dp"
+            android:letterSpacing="0.1"
+            android:text="Tratamento diário"
+            android:textColor="@color/azul_clr"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/relogio"
+            android:layout_width="23dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="98dp"
+            app:srcCompat="@drawable/clock" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="98dp"
+            android:text="8:00"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="98dp"
+            android:text="12:00"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="98dp"
+            android:text="21:00"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/editar"
+            style="@style/editar"
+            android:contentDescription="no"
+            app:srcCompat="@drawable/edit" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            style="@style/apagar"
+            android:contentDescription="no"
+            app:srcCompat="@drawable/lixo" />
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
