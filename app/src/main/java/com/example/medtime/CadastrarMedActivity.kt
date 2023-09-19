@@ -10,7 +10,18 @@ class CadastrarMedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.medicamentos)
 
+        voltarMain()
     }
+    fun voltarMain() {
 
+        val setaVoltar = findViewById<ImageView>(R.id.seta)
+
+        setaVoltar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+    }
 
 }

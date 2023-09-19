@@ -14,10 +14,16 @@ class MainActivity : AppCompatActivity() {
 
     fun navegarLayout(){
         val botao = findViewById<Button>(R.id.meusAgend)
+        val botao2 = findViewById<Button>(R.id.novoAgend)
 
         botao.setOnClickListener {
             val intent1 = Intent(this, AgendamentoActivity::class.java)
             startActivity(intent1)
+        }
+
+        botao2.setOnClickListener {
+            val intent2 = Intent(this, CadastrarMedActivity::class.java)
+            startActivity(intent2)
         }
 
     }
