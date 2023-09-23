@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/flecha"
-        android:layout_width="41dp"
-        android:layout_height="34dp"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
