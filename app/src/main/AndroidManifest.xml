@@ -25,7 +25,7 @@
 
         </activity>
 
-        <activity android:name=".CadastrarMedActivity" >
+        <activity android:name=".CadastrarActivity" >
 
         </activity>
 

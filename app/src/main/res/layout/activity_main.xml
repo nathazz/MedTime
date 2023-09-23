@@ -10,70 +10,47 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/novoAgend"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:layout_margin="28dp"
-        android:background="@drawable/bg_btn"
-        android:backgroundTint="@color/roxo"
-        android:drawableStart="@drawable/baseline_add_to_photos_24"
-        android:letterSpacing="0.1"
+        style="@style/btn_main"
         android:text="Novo agendamento"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="17sp"
+        android:drawableStart= "@drawable/baseline_add_to_photos_24"
+        android:backgroundTint="@color/roxo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/medsCadastrados"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/medsCadastrados"
         app:layout_constraintTop_toBottomOf="@+id/container"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/medsCadastrados"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:layout_margin="28dp"
-        android:background="@drawable/bg_btn"
+        style="@style/btn_main"
         android:backgroundTint="@color/azul_btn"
         android:drawableStart="@drawable/pilula2"
-        android:letterSpacing="0.1"
         android:text="Medicamentos cadastrados"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/meusAgend"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/meusAgend"
         app:layout_constraintTop_toBottomOf="@+id/novoAgend"
+        app:layout_constraintVertical_bias="0.069"
         tools:ignore="HardcodedText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/meusAgend"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        android:layout_margin="28dp"
-        android:layout_marginBottom="148dp"
-        android:background="@drawable/bg_btn"
         android:backgroundTint="@color/azul_btn"
         android:drawableStart="@drawable/baseline_checklist_24"
-        android:letterSpacing="0.1"
+        style="@style/btn_main"
         android:text="Meus agendamentos"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medsCadastrados"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.112" />
 
     <View
         android:id="@+id/fundo"
         android:layout_width="match_parent"
-        android:layout_height="243dp"
+        android:layout_height="240dp"
         android:background="@drawable/fundo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,14 +105,14 @@
 
     <View
         android:id="@+id/container"
-        android:layout_width="336dp"
-        android:layout_height="198dp"
+        android:layout_width="308dp"
+        android:layout_height="183dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="188dp"
         android:background="@drawable/container"
         android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo" />
 
@@ -147,28 +124,26 @@
         android:letterSpacing="0.1"
         android:text="Sua próxima medicação está \nagendada para"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="@+id/container"
-        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="@+id/container"
         app:layout_constraintTop_toTopOf="@+id/container"
-        app:layout_constraintVertical_bias="0.124"
+        app:layout_constraintVertical_bias="0.096"
         tools:ignore="HardcodedText" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/recente"
-        android:layout_width="305dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/azul_btn"
+        android:id="@+id/card_recente"
+        style="@style/card_main"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="@+id/container"
-        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="@+id/container"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.071">
 
         <TextView
             android:id="@+id/dia"
@@ -186,57 +161,57 @@
             android:id="@+id/horaMarcada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="28dp"
             android:letterSpacing="0.1"
             android:text="19:30"
             android:textColor="@color/verde_clr"
-            android:textSize="32sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/med"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="71dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="65dp"
             android:letterSpacing="0.1"
             android:text="Paracentamol"
             android:textColor="@color/white"
+            android:textSize="13sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dosagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="71dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="65dp"
             android:letterSpacing="0.1"
             android:text="50mg"
             android:textColor="@color/azul_clr"
-            android:textStyle="bold"
-            />
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:layout_marginStart="240dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="225dp"
             android:layout_marginTop="1dp"
             android:background="@color/azul_btn"
-            app:srcCompat="@drawable/edit"
             android:contentDescription="no"
-            tools:ignore="HardcodedText"
-            />
+            app:srcCompat="@drawable/edit"
+            tools:ignore="HardcodedText" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="64dp"
-            android:layout_height="57dp"
-            android:background="@color/azul_btn"
-            android:layout_marginStart="240dp"
-            android:contentDescription="no"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="225dp"
             android:layout_marginTop="45dp"
+            android:background="@color/azul_btn"
+            android:contentDescription="no"
             app:srcCompat="@drawable/lixo" />
     </androidx.cardview.widget.CardView>
 

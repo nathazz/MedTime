@@ -4,17 +4,23 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.medtime.databinding.CadastrarBinding
 
-class CadastrarMedActivity : AppCompatActivity() {
+
+class CadastrarActivity : AppCompatActivity() {
+
+    private lateinit var binding: CadastrarBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = CadastrarBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.medicamentos)
+        setContentView(binding.root)
 
         voltarMain()
     }
     fun voltarMain() {
 
-        val setaVoltar = findViewById<ImageView>(R.id.seta)
+        val setaVoltar = binding.seta
 
         setaVoltar.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
