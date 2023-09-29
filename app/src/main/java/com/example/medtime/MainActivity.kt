@@ -12,24 +12,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        navegarLayout()
-    }
 
-    fun navegarLayout(){
-        val botao = binding.meusAgend
-        val botao2 = binding.novoAgend
-
-        botao.setOnClickListener {
-            val intent1 = Intent(this, AgendamentoActivity::class.java)
-            startActivity(intent1)
+        binding.meusAgend.setOnClickListener {
+            startActivity(Intent(this, AgendamentoActivity::class.java))
         }
 
-        botao2.setOnClickListener {
-            val intent2 = Intent(this, CadastrarActivity::class.java)
-            startActivity(intent2)
+        binding.novoAgend.setOnClickListener {
+            startActivity(Intent(this, CadastrarActivity::class.java))
         }
 
     }
+
+
 
 
 }

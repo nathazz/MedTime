@@ -4,23 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:statusBarColor">@color/azul_escuro</item>
     </style>
-    
-    <style name="card_agnd">
-       <item name="android:layout_width">315dp</item>
-        <item name="android:layout_height">120dp</item>
-        <item name="android:paddingRight">25dp</item>
-        <item name="android:paddingLeft">25dp</item>
-        <item name="android:backgroundTint">@color/azul_btn</item>
-        <item name="android:layout_margin">20dp</item>
-    </style>
 
-    <style name="card_main">
-        <item name="android:layout_width">280dp</item>
-        <item name="android:layout_height">95dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:backgroundTint">@color/azul_btn</item>
-    </style>
 
+    <!--- style agendamentos -->
 
     <style name="titulos_card">
         <item name="android:layout_width">match_parent</item>
@@ -56,7 +42,26 @@
         <item name="android:layout_marginTop">45dp</item>
     </style>
 
-    <style name="quantDia">
+    <style name="card_agnd">
+       <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:backgroundTint">@color/azul_btn</item>
+        <item name="android:layout_marginHorizontal">50dp</item>
+
+    </style>
+
+
+
+    <!--- Style main-->
+    <style name="card_main">
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">95dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:backgroundTint">@color/azul_btn</item>
+    </style>
+
+
+    <style name="quant_dia">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:letterSpacing">0.1</item>

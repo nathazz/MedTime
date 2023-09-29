@@ -10,6 +10,7 @@
     <color name="azul_escuro">#040F1F</color>
     <color name="branco_esc">#D8D8D8</color>
     <color name="branco_container">#D9D9D9</color>
+    <color name="branco_cinza">#C7C7C7</color>
 
 
 </resources>

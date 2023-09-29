@@ -13,20 +13,14 @@ class AgendamentoActivity : AppCompatActivity() {
         binding = AgendamentosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        voltarMain()
-    }
-
-
-    fun voltarMain(){
-        val setaVoltar = binding.flecha
-
-        setaVoltar.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            binding.flecha.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
-
-
     }
+
+
+
+
 
 }

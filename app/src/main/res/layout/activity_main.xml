@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8D8D8"
+    android:background="@color/branco_esc"
     tools:context=".MainActivity">
 
 
@@ -16,9 +16,9 @@
         android:text="Novo agendamento"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/medsCadastrados"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/medsCadastrados"
-        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layout_constraintTop_toBottomOf="@+id/viewMain"
         app:layout_constraintVertical_bias="0.112" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -104,12 +104,12 @@
         tools:ignore="HardcodedText" />
 
     <View
-        android:id="@+id/container"
+        android:id="@+id/viewMain"
         android:layout_width="308dp"
         android:layout_height="183dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="188dp"
-        android:background="@drawable/container"
+        android:background="@drawable/bg_container"
         android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.44"
@@ -126,27 +126,27 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintEnd_toEndOf="@+id/container"
+        app:layout_constraintBottom_toBottomOf="@+id/viewMain"
+        app:layout_constraintEnd_toEndOf="@+id/viewMain"
         app:layout_constraintHorizontal_bias="0.169"
-        app:layout_constraintStart_toStartOf="@+id/container"
-        app:layout_constraintTop_toTopOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/viewMain"
+        app:layout_constraintTop_toTopOf="@+id/viewMain"
         app:layout_constraintVertical_bias="0.096"
         tools:ignore="HardcodedText" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_recente"
+        android:id="@+id/cardMain"
         style="@style/card_main"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintEnd_toEndOf="@+id/container"
-        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintBottom_toBottomOf="@+id/viewMain"
+        app:layout_constraintEnd_toEndOf="@+id/viewMain"
+        app:layout_constraintStart_toStartOf="@+id/viewMain"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.071">
 
         <TextView
-            android:id="@+id/dia"
+            android:id="@+id/txtDia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
@@ -158,7 +158,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/horaMarcada"
+            android:id="@+id/txtHoras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -170,7 +170,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/med"
+            android:id="@+id/txtMed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -182,7 +182,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/dosagem"
+            android:id="@+id/txtDosagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
@@ -194,7 +194,7 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/btnEditar"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="225dp"
@@ -205,7 +205,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/btnExlcuir"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="225dp"
