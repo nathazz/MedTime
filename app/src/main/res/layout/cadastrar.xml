@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/seta"
-        android:layout_width="37dp"
-        android:layout_height="37dp"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
         android:importantForAccessibility="no"
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,10 +29,10 @@
         android:letterSpacing="0.1"
         android:text="Novo Agendamento"
         android:textColor="@color/black"
-        android:textSize="23sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seta" />
 
@@ -60,35 +60,17 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/edtDosagem" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        android:layout_width="224dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="124dp"
-        android:background="@drawable/bg_btncadastro"
-        android:letterSpacing="0.1"
+        android:id="@+id/btnSalvar"
+        style="@style/btn_cadastro"
+        android:layout_marginBottom="168dp"
         android:text="Salvar"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="12sp"
-        android:text="teste"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView6"
@@ -101,54 +83,73 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinOn" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:text="Duração"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/spinTwo" />
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="70dp"
+        android:id="@+id/edtDosagem"
+       style="@style/edt_cadastro"
         android:layout_marginTop="12dp"
-        android:background="@drawable/bg_dosagem"
-        android:elevation="2dp"
         android:ems="10"
         android:hint="Dosagem"
         android:inputType="text"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="#D5000000"
-        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinOn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:elevation="5dp"
         android:layout_marginHorizontal="70dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_spinner"
-        android:elevation="2dp"
+        android:pointerIcon="arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinOn"
+        app:layout_constraintEnd_toEndOf="@+id/spinOn"
+        app:layout_constraintTop_toTopOf="@+id/spinOn"
+        android:src="@drawable/baseline_arrow_drop_down_24" />
+
+    <Spinner
+        android:id="@+id/spinTwo"
+        style="@style/snipper_custom"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinTwo"
+        app:layout_constraintEnd_toEndOf="@+id/spinTwo"
+        app:layout_constraintTop_toTopOf="@+id/spinTwo"
+        android:src="@drawable/baseline_arrow_drop_down_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

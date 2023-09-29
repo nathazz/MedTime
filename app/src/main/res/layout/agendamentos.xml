@@ -44,9 +44,9 @@
         style="@style/card_agnd"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/adicionar"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/card1"
         app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/card1"
         app:layout_constraintTop_toBottomOf="@+id/card1"
         app:layout_constraintVertical_bias="0.049"
         tools:ignore="TextSizeCheck">
@@ -149,10 +149,9 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/adicionar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263"
+        app:layout_constraintVertical_bias="0.275"
         tools:ignore="TextSizeCheck">
 
         <ImageView
