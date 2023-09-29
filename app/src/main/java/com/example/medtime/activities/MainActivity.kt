@@ -1,4 +1,4 @@
-package com.example.medtime
+package com.example.medtime.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
