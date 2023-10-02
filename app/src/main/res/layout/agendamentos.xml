@@ -31,104 +31,11 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flecha"
-        app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card2"
-        style="@style/card_agnd"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/adicionar"
-        app:layout_constraintEnd_toEndOf="@+id/card1"
-        app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toStartOf="@+id/card1"
-        app:layout_constraintTop_toBottomOf="@+id/card1"
-        app:layout_constraintVertical_bias="0.049"
-        tools:ignore="TextSizeCheck">
-
-        <ImageView
-            android:id="@+id/iconGota"
-            style="@style/foto_med"
-            android:contentDescription="TODO"
-            app:srcCompat="@drawable/gotas" />
-
-        <TextView
-            android:id="@+id/txtColirio"
-            style="@style/titulos_card"
-            android:letterSpacing="0.1"
-            android:text="Colírio"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/txtFrequencia2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="85dp"
-            android:layout_marginTop="48dp"
-            android:letterSpacing="0.1"
-            android:text="2x por dia"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/txtData1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="73dp"
-            android:letterSpacing="0.1"
-            android:text="26 jun"
-            android:textColor="@color/azul_clr"
-            android:textSize="18sp"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/txtSeparacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="142dp"
-            android:layout_marginTop="73dp"
-            android:letterSpacing="0.1"
-            android:text=" - "
-            android:textColor="@color/azul_clr"
-            android:textSize="18sp"
-            tools:ignore="HardcodedText"
-
-            />
-
-        <TextView
-            android:id="@+id/txtData2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="73dp"
-            android:letterSpacing="0.1"
-            android:text="28 Aug"
-            android:textColor="@color/azul_clr"
-            android:textSize="18sp"
-            tools:ignore="HardcodedText"
-
-            />
-
-        <ImageButton
-            android:id="@+id/editar2"
-            style="@style/editar"
-            android:contentDescription="no"
-            app:srcCompat="@drawable/edit" />
-
-        <ImageButton
-            android:id="@+id/delete2"
-            style="@style/apagar"
-            android:contentDescription="no"
-            app:srcCompat="@drawable/lixo" />
-
-    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/adicionar"
@@ -146,12 +53,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
         style="@style/card_agnd"
+        android:layout_marginBottom="15dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/adicionar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275"
+        app:layout_constraintTop_toBottomOf="@+id/txtAgend"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextSizeCheck">
 
         <ImageView
@@ -167,7 +76,7 @@
 
         <TextView
             android:id="@+id/txtFrequencia"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="85dp"
             android:layout_marginTop="46dp"
@@ -179,7 +88,7 @@
 
         <TextView
             android:id="@+id/txtTratamento"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="85dp"
             android:layout_marginTop="67dp"
@@ -199,7 +108,7 @@
 
         <TextView
             android:id="@+id/txtHr1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="108dp"
             android:layout_marginTop="91dp"
@@ -210,7 +119,7 @@
 
         <TextView
             android:id="@+id/txtHr2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="143dp"
             android:layout_marginTop="91dp"
@@ -221,7 +130,7 @@
 
         <TextView
             android:id="@+id/txtHr3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="188dp"
             android:layout_marginTop="91dp"

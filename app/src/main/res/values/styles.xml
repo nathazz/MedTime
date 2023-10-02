@@ -9,29 +9,29 @@
     <!--- style agendamentos -->
 
     <style name="titulos_card">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">85dp</item>
         <item name="android:layout_marginTop">14dp</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textColor">@color/verde_clr</item>
-        <item name="android:textSize">23sp</item>
+        <item name="android:textSize">22sp</item>
         <item  name="android:textStyle">bold</item>
     </style>
 
     <style name="editar">
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">48dp</item>
-        <item name="android:layout_marginStart">240dp</item>
-        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">235dp</item>
+        <item name="android:layout_marginTop">1dp</item>
         <item name="android:background">@color/azul_btn</item>
     </style>
 
     <style name="apagar">
         <item name="android:layout_width">48dp</item>
         <item name="android:layout_height">48dp</item>
-        <item name="android:layout_marginStart">240dp</item>
-        <item name="android:layout_marginTop">45dp</item>
+        <item name="android:layout_marginStart">235dp</item>
+        <item name="android:layout_marginTop">55dp</item>
         <item name="android:background">@color/azul_btn</item>
     </style>
 
@@ -45,8 +45,7 @@
     <style name="card_agnd">
        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">120dp</item>
-        <item name="android:layout_marginLeft">60dp</item>
-        <item name="android:layout_marginRight">60dp</item>
+        <item name="android:layout_margin">60dp</item>
         <item name="android:backgroundTint">@color/azul_btn</item>
 
     </style>
@@ -107,16 +106,31 @@
 
     <style name="btn_cadastro">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">65dp</item>
-        <item name="android:layout_marginHorizontal">80dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginHorizontal">95dp</item>
         <item name="android:background">@drawable/bg_btncadastro</item>
         <item name="android:letterSpacing">0.1</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">20sp</item>
-
     </style>
+
+    <style name="txt_cadastro">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginHorizontal">70dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:background">@drawable/bg_dosagem</item>
+        <item name="android:drawableStart">@drawable/baseline_calendar_month_24</item>
+        <item name="elevation">5dp</item>
+    </style>
+
+
+
 
 
 

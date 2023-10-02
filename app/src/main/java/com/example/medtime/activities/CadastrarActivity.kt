@@ -1,14 +1,21 @@
 package com.example.medtime.activities
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.DatePicker
 import androidx.appcompat.app.AppCompatActivity
 import com.example.medtime.R
 import com.example.medtime.databinding.CadastrarBinding
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 
 class CadastrarActivity : AppCompatActivity() {
+
 
     private lateinit var binding: CadastrarBinding
 
@@ -23,13 +30,22 @@ class CadastrarActivity : AppCompatActivity() {
             finish()
     }
 
+        //selecionarData
+        binding.selecionar1.setOnClickListener {
+            selecionarData(binding.selecionar1)
+        }
+
+        binding.selecionar2.setOnClickListener {
+            selecionarData(binding.selecionar2)
+        }
+
+
         configurarSpinner()
-
     }
-
 
     /*Apenas um teste(mudar conforme o tempo)*/
     fun configurarSpinner(){
+
         val drop = binding.spinOn
         val drop2 = binding.spinTwo
 
@@ -51,7 +67,43 @@ class CadastrarActivity : AppCompatActivity() {
     }
 
 
+    private fun selecionarData(view: View){
+        val datePicker = Calendar.getInstance()
 
+        val data = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+            datePicker[Calendar.YEAR] = year
+            datePicker[Calendar.MONTH] = month
+            datePicker[Calendar.DAY_OF_MONTH] = dayOfMonth
+
+            val formato = "dd-MMMM-yyyy"
+            val simpleDateFormat =  SimpleDateFormat(formato, Locale("pt", "br"))
+
+            if(view == binding.selecionar1) {
+                binding.selecionar1.text = simpleDateFormat.format(datePicker.time)
+            } else if(view == binding.selecionar2) {
+                binding.selecionar2.text = simpleDateFormat.format(datePicker.time)
+            }
+        }
+        val datePickerDialog = DatePickerDialog(
+            this@CadastrarActivity,
+            data,
+            datePicker[Calendar.YEAR],
+            datePicker[Calendar.MONTH],
+            datePicker[Calendar.DAY_OF_MONTH]
+        )
+
+        datePickerDialog.show()
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+

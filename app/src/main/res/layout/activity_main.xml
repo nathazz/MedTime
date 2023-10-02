@@ -37,9 +37,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/meusAgend"
+        style="@style/btn_main"
         android:backgroundTint="@color/azul_btn"
         android:drawableStart="@drawable/baseline_checklist_24"
-        style="@style/btn_main"
         android:text="Meus agendamentos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,13 +64,13 @@
         android:layout_width="98dp"
         android:layout_height="94dp"
         android:importantForAccessibility="no"
+        android:src="@drawable/alarme"
         app:layout_constraintBottom_toBottomOf="@+id/fundo"
         app:layout_constraintEnd_toEndOf="@+id/fundo"
         app:layout_constraintHorizontal_bias="0.734"
         app:layout_constraintStart_toStartOf="@+id/fundo"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.335"
-        android:src="@drawable/alarme" />
+        app:layout_constraintVertical_bias="0.335" />
 
     <TextView
         android:id="@+id/boasVindas"
@@ -94,13 +94,13 @@
         android:layout_width="295dp"
         android:layout_height="200dp"
         android:contentDescription="no"
+        android:src="@drawable/pill"
         app:layout_constraintBottom_toBottomOf="@+id/fundo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/fundo"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.0"
-        android:src="@drawable/pill"
+        app:layout_constraintVertical_bias="0.05"
         tools:ignore="HardcodedText" />
 
     <View
