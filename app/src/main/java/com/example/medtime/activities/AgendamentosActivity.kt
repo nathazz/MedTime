@@ -23,6 +23,10 @@ class AgendamentosActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.btnFlutuante.setOnClickListener{
+            startActivity(Intent(this, CadastrarActivity::class.java))
+        }
+
         listar()
     }
 
