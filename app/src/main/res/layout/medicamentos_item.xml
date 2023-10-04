@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/bg_btncadastro"
-    android:layout_marginTop="20dp"
-    android:layout_marginHorizontal="30dp"
-    android:layout_height="140dp">
+    android:layout_height="125dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginLeft="50dp"
+    >
 
 
     <ImageView
         android:id="@+id/fotoGota"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/gotas"
@@ -24,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="15dp"
         android:letterSpacing="0.1"
         android:text="Colírio"
         android:textColor="@color/verde_clr"
@@ -37,11 +39,11 @@
         android:id="@+id/dosagemMed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
+        android:layout_marginStart="108dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="2x por dia"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fotoGota"
@@ -52,9 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:text="26 Jun - 28 Aug"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         android:textColor="@color/azul_clr"
         app:layout_constraintStart_toEndOf="@+id/fotoGota"
         app:layout_constraintTop_toBottomOf="@+id/dosagemMed" />
@@ -72,7 +74,7 @@
         android:contentDescription="null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit2" />
+        app:srcCompat="@drawable/edit" />
 
     <ImageButton
         android:id="@+id/deletarMed"
@@ -86,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/dataMed"
-        app:srcCompat="@drawable/lixo2" />
+        app:srcCompat="@drawable/lixo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

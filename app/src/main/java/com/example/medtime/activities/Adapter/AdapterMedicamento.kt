@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.medtime.R
 import com.example.medtime.activities.model.Medicamento
 
-//essa parte aqui n entendi mt bemkkkk😥
+//adaptando o recyclerView para um MutableList                                                                  //
 class AdapterMedicamento(private val contexto: Context, private val medicamentos: MutableList<Medicamento>) : RecyclerView.Adapter<AdapterMedicamento.MedicamentoViewHolder>() {
 
         //metodo responsável por criar os itens

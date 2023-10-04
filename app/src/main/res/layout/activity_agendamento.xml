@@ -11,16 +11,30 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_medicamentos"
         android:layout_width="match_parent"
-        android:layout_height="767dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:paddingTop="165dp"
+        app:layout_constraintTop_toBottomOf="@+id/agnd_cadastrados"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/agnd_cadastrados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="0.1"
+        android:text="Agendamentos cadastrados"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agnd_cadastrados" />
+        app:layout_constraintTop_toBottomOf="@+id/seta2" />
 
     <ImageView
         android:id="@+id/seta2"
-        android:layout_width="30dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/arrow"
@@ -29,20 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/agnd_cadastrados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:letterSpacing="0.1"
-        android:text="Agendamentos cadastrados"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seta2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
