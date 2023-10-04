@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.meusAgend.setOnClickListener {
-            startActivity(Intent(this, AgendamentoActivity::class.java))
+            startActivity(Intent(this, AgendamentosActivity::class.java))
         }
 
         binding.novoAgend.setOnClickListener {

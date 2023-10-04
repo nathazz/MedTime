@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import androidx.appcompat.app.AppCompatActivity
 import com.example.medtime.R
-import com.example.medtime.databinding.CadastrarBinding
+import com.example.medtime.databinding.ActivityCadastrarBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -17,13 +17,11 @@ import java.util.Locale
 class CadastrarActivity : AppCompatActivity() {
 
 
-    private lateinit var binding: CadastrarBinding
-
+   private lateinit var binding: ActivityCadastrarBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding = CadastrarBinding.inflate(layoutInflater)
+        binding = ActivityCadastrarBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
 
         binding.seta.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -44,7 +42,7 @@ class CadastrarActivity : AppCompatActivity() {
     }
 
     /*Apenas um teste(mudar conforme o tempo)*/
-    fun configurarSpinner(){
+    private fun configurarSpinner(){
 
         val drop = binding.spinOn
         val drop2 = binding.spinTwo
@@ -84,6 +82,7 @@ class CadastrarActivity : AppCompatActivity() {
                 binding.selecionar2.text = simpleDateFormat.format(datePicker.time)
             }
         }
+
         val datePickerDialog = DatePickerDialog(
             this@CadastrarActivity,
             data,
