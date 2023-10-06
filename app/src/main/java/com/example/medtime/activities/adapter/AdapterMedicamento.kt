@@ -1,4 +1,4 @@
-package com.example.medtime.activities.Adapter
+package com.example.medtime.activities.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.medtime.R
 import com.example.medtime.activities.model.Medicamento
 
-//adaptando o recyclerView para um MutableList                                                                  //
+//adaptando o recyclerView para um MutableList
 class AdapterMedicamento(private val contexto: Context, private val medicamentos: MutableList<Medicamento>) : RecyclerView.Adapter<AdapterMedicamento.MedicamentoViewHolder>() {
 
         //metodo responsável por criar os itens
@@ -38,6 +38,7 @@ class AdapterMedicamento(private val contexto: Context, private val medicamentos
         //inicialização das variaveis(ajeitar data,id e hora)
     inner class  MedicamentoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+            //da pra usar o binding, mas usei esse por causa de segurança mesmo
         val foto = itemView.findViewById<ImageView>(R.id.fotoGota)
         val nome = itemView.findViewById<TextView>(R.id.titulo_med)
         val dosagem = itemView.findViewById<TextView>(R.id.dosagemMed)

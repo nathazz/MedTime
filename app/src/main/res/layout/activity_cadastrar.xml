@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco_esc"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.controllers.MainActivity">
 
 
     <ImageView
         android:id="@+id/seta"
-        android:layout_width="30dp"
+        android:layout_width="35dp"
         android:layout_height="35dp"
         android:importantForAccessibility="no"
         android:src="@drawable/arrow"
@@ -25,9 +25,9 @@
         android:id="@+id/nv_agend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Novo Agendamento"
         android:layout_marginTop="24dp"
         android:letterSpacing="0.1"
-        android:text="Novo Agendamento"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -65,12 +65,12 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSalvar"
         style="@style/btn_cadastro"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="80dp"
         android:text="Salvar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selecionar2" />
+        app:layout_constraintTop_toBottomOf="@+id/dataFinal" />
 
     <TextView
         android:id="@+id/textView6"
@@ -83,7 +83,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinOn" />
+        app:layout_constraintTop_toBottomOf="@+id/spinMedicamento" />
 
     <TextView
         android:id="@+id/textView8"
@@ -96,7 +96,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/spinMedida" />
 
     <EditText
         android:id="@+id/edtDosagem"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Spinner
-        android:id="@+id/spinOn"
+        android:id="@+id/spinMedicamento"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="5dp"
@@ -128,13 +128,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinOn"
-        app:layout_constraintEnd_toEndOf="@+id/spinOn"
-        app:layout_constraintTop_toTopOf="@+id/spinOn"
+        app:layout_constraintBottom_toBottomOf="@+id/spinMedicamento"
+        app:layout_constraintEnd_toEndOf="@+id/spinMedicamento"
+        app:layout_constraintTop_toTopOf="@+id/spinMedicamento"
         android:src="@drawable/baseline_arrow_drop_down_24" />
 
     <Spinner
-        android:id="@+id/spinTwo"
+        android:id="@+id/spinMedida"
         style="@style/snipper_custom"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,9 +146,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinTwo"
-        app:layout_constraintEnd_toEndOf="@+id/spinTwo"
-        app:layout_constraintTop_toTopOf="@+id/spinTwo"
+        app:layout_constraintBottom_toBottomOf="@+id/spinMedida"
+        app:layout_constraintEnd_toEndOf="@+id/spinMedida"
+        app:layout_constraintTop_toTopOf="@+id/spinMedida"
         android:src="@drawable/baseline_arrow_drop_down_24" />
 
     <TextView
@@ -166,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/selecionar1"
+        android:id="@+id/dataInicio"
         style="@style/txt_cadastro"
         android:layout_marginTop="4dp"
         android:drawableStart="@drawable/baseline_calendar_month_24"
@@ -189,10 +189,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selecionar1" />
+        app:layout_constraintTop_toBottomOf="@+id/dataInicio" />
 
     <TextView
-        android:id="@+id/selecionar2"
+        android:id="@+id/dataFinal"
         style="@style/txt_cadastro"
         android:layout_marginTop="4dp"
         android:ems="10"

@@ -1,4 +1,4 @@
-package com.example.medtime.activities
+package com.example.medtime.activities.controllers
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.novoAgend.setOnClickListener {
             startActivity(Intent(this, CadastrarActivity::class.java))
+        }
+
+        binding.medsCadastrados.setOnClickListener {
+            startActivity(Intent(this, MedCadastrados::class.java))
         }
 
     }

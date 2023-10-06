@@ -1,11 +1,10 @@
-package com.example.medtime.activities
+package com.example.medtime.activities.controllers
 
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.DatePicker
 import androidx.appcompat.app.AppCompatActivity
 import com.example.medtime.R
 import com.example.medtime.databinding.ActivityCadastrarBinding
@@ -29,12 +28,12 @@ class CadastrarActivity : AppCompatActivity() {
     }
 
         //selecionarData
-        binding.selecionar1.setOnClickListener {
-            selecionarData(binding.selecionar1)
+        binding.dataInicio.setOnClickListener {
+            selecionarData(binding.dataInicio)
         }
 
-        binding.selecionar2.setOnClickListener {
-            selecionarData(binding.selecionar2)
+        binding.dataFinal.setOnClickListener {
+            selecionarData(binding.dataFinal)
         }
 
 
@@ -45,8 +44,8 @@ class CadastrarActivity : AppCompatActivity() {
     /*Apenas um teste(mudar conforme o tempo)*/
     private fun configurarSpinner(){
 
-        val drop = binding.spinOn
-        val drop2 = binding.spinTwo
+        val drop = binding.spinMedicamento
+        val drop2 = binding.spinMedida
 
         val medicamentos = arrayOf("Rivotril", "Colírio", "Dramin")
         val dosagem = arrayOf("Miligramas(mg)", "Militlitros(ml)","Unidades internacionais(UI)",
@@ -77,10 +76,10 @@ class CadastrarActivity : AppCompatActivity() {
             val formato = "dd-MMMM-yyyy"
             val simpleDateFormat =  SimpleDateFormat(formato, Locale("pt", "br"))
 
-            if(view == binding.selecionar1) {
-                binding.selecionar1.text = simpleDateFormat.format(datePicker.time)
-            } else if(view == binding.selecionar2) {
-                binding.selecionar2.text = simpleDateFormat.format(datePicker.time)
+            if(view == binding.dataInicio) {
+                binding.dataInicio.text = simpleDateFormat.format(datePicker.time)
+            } else if(view == binding.dataFinal) {
+                binding.dataFinal.text = simpleDateFormat.format(datePicker.time)
             }
         }
 

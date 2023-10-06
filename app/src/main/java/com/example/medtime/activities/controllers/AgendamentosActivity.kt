@@ -1,4 +1,4 @@
-package com.example.medtime.activities
+package com.example.medtime.activities.controllers
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,13 +6,13 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.medtime.R
-import com.example.medtime.activities.Adapter.AdapterMedicamento
+import com.example.medtime.activities.adapter.AdapterMedicamento
 import com.example.medtime.activities.model.Medicamento
 import com.example.medtime.databinding.ActivityAgendamentoBinding
 
 class AgendamentosActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityAgendamentoBinding
+    private lateinit var binding: ActivityAgendamentoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityAgendamentoBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
@@ -27,15 +27,16 @@ class AgendamentosActivity : AppCompatActivity() {
             startActivity(Intent(this, CadastrarActivity::class.java))
         }
 
-        listar()
+        listarMedicamentos()
     }
 
 
-    fun listar(){
-        val re_medicamentos = findViewById<RecyclerView>(R.id.recycler_medicamentos)
+    fun listarMedicamentos(){
+        val re_medicamentos = binding.recyclerMedicamentos
             //lista na vertical
         re_medicamentos.layoutManager = LinearLayoutManager(this )
         re_medicamentos.setHasFixedSize(true)
+
 
         //configurar o Adapter
 
@@ -60,6 +61,8 @@ class AgendamentosActivity : AppCompatActivity() {
            "Tratamento diário"
        )
         listaMedicamentos.add(medicamentos2)
+
+
 
     }
 
