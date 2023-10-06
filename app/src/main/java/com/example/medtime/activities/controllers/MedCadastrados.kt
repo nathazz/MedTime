@@ -11,7 +11,7 @@ import com.example.medtime.databinding.ActivityMedCadastradosBinding
 
 class MedCadastrados : AppCompatActivity() {
 
-    lateinit var binding: ActivityMedCadastradosBinding
+    private lateinit var binding: ActivityMedCadastradosBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
         binding = ActivityMedCadastradosBinding.inflate(layoutInflater)
