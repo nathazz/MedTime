@@ -9,7 +9,6 @@
 
 
 
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -24,6 +23,7 @@
         app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flechaMedicamento" />
+
 
     <ImageView
         android:id="@+id/flechaMedicamento"
@@ -64,93 +64,15 @@
         android:id="@+id/btnSalvarNovo"
         android:layout_width="229dp"
         android:layout_height="73dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/bg_btncadastro"
         android:letterSpacing="0.1"
         android:text="Salvar"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCaixinha" />
-
-    <ImageView
-        android:id="@+id/voltarMain"
-        android:layout_width="36dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/baseline_home_24" />
-
-    <ImageView
-        android:id="@+id/ftGotas"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewGotas"
-        app:layout_constraintEnd_toEndOf="@+id/viewGotas"
-        app:layout_constraintStart_toStartOf="@+id/viewGotas"
-        app:layout_constraintTop_toTopOf="@+id/viewGotas"
-        android:src="@drawable/gotas"/>
-
-    <ImageView
-        android:id="@+id/ftInjecao"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewInjecao"
-        app:layout_constraintEnd_toEndOf="@+id/viewInjecao"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="@+id/viewInjecao"
-        app:layout_constraintTop_toTopOf="@+id/viewInjecao"
-        android:src="@drawable/injecao" />
-
-
-    <View
-        android:id="@+id/viewInjecao"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_tbn_imagens"
-        app:layout_constraintStart_toEndOf="@+id/viewCapsula"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <ImageView
-        android:id="@+id/ftCaixinha"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
-        android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewCaixinha"
-        app:layout_constraintEnd_toEndOf="@+id/viewCaixinha"
-        app:layout_constraintStart_toStartOf="@+id/viewCaixinha"
-        app:layout_constraintTop_toTopOf="@+id/viewCaixinha"
-        android:src="@drawable/caixinha" />
-
-    <ImageView
-        android:id="@+id/ftCapsula"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
-        android:elevation="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewCapsula"
-        app:layout_constraintEnd_toEndOf="@+id/viewCapsula"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="@+id/viewCapsula"
-        app:layout_constraintTop_toTopOf="@+id/viewCapsula"
-        android:src="@drawable/capsula" />
-
-    <View
-        android:id="@+id/viewCapsula"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_tbn_imagens"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <View
         android:id="@+id/viewCaixinha"
@@ -172,6 +94,87 @@
         app:layout_constraintStart_toEndOf="@+id/viewCaixinha"
         app:layout_constraintTop_toBottomOf="@+id/viewInjecao" />
 
+
+    <View
+        android:id="@+id/viewInjecao"
+        android:layout_width="110dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_tbn_imagens"
+        app:layout_constraintStart_toEndOf="@+id/viewCapsula"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <View
+        android:id="@+id/viewCapsula"
+        android:layout_width="110dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_tbn_imagens"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <ImageView
+        android:id="@+id/voltarMain"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/baseline_home_24" />
+
+
+    <ImageView
+        android:id="@+id/ftGotas"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:elevation="2dp"
+        android:src="@drawable/gotas"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGotas"
+        app:layout_constraintEnd_toEndOf="@+id/viewGotas"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="@+id/viewGotas"
+        app:layout_constraintTop_toTopOf="@+id/viewGotas" />
+
+    <ImageView
+        android:id="@+id/ftInjecao"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:elevation="2dp"
+        android:src="@drawable/injecao"
+        app:layout_constraintBottom_toBottomOf="@+id/viewInjecao"
+        app:layout_constraintEnd_toEndOf="@+id/viewInjecao"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="@+id/viewInjecao"
+        app:layout_constraintTop_toTopOf="@+id/viewInjecao" />
+
+
+    <ImageView
+        android:id="@+id/ftCaixinha"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:elevation="2dp"
+        android:src="@drawable/caixinha"
+        app:layout_constraintBottom_toBottomOf="@+id/viewCaixinha"
+        app:layout_constraintEnd_toEndOf="@+id/viewCaixinha"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/viewCaixinha"
+        app:layout_constraintTop_toTopOf="@+id/viewCaixinha" />
+
+    <ImageView
+        android:id="@+id/ftCapsula"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:elevation="3dp"
+        android:src="@drawable/capsula"
+        app:layout_constraintBottom_toBottomOf="@+id/viewCapsula"
+        app:layout_constraintEnd_toEndOf="@+id/viewCapsula"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="@+id/viewCapsula"
+        app:layout_constraintTop_toTopOf="@+id/viewCapsula" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
@@ -184,6 +187,48 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtNovoNome" />
+
+    <CheckBox
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:buttonTint="#FFFFFF"
+        android:src="@drawable/capsula"
+        app:layout_constraintBottom_toTopOf="@+id/viewCaixinha"
+        app:layout_constraintEnd_toStartOf="@+id/viewInjecao"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ftCapsula"
+        app:layout_constraintTop_toTopOf="@+id/viewCapsula"
+        app:layout_constraintVertical_bias="0.627" />
+
+    <CheckBox
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:buttonTint="#FFFFFF"
+        android:src="@drawable/injecao"
+        app:layout_constraintBottom_toBottomOf="@+id/viewInjecao"
+        app:layout_constraintStart_toEndOf="@+id/ftInjecao"
+        app:layout_constraintTop_toTopOf="@+id/viewInjecao"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:buttonTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/viewGotas"
+        app:layout_constraintStart_toEndOf="@+id/ftCaixinha"
+        app:layout_constraintTop_toTopOf="@+id/viewCaixinha" />
+
+    <CheckBox
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+
+        android:buttonTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewGotas"
+        app:layout_constraintStart_toEndOf="@+id/ftGotas"
+        app:layout_constraintTop_toTopOf="@+id/viewGotas"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
