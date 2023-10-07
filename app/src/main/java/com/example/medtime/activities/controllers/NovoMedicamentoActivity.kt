@@ -17,5 +17,10 @@ class NovoMedicamentoActivity : AppCompatActivity() {
             startActivity(Intent(this,MedCadastrados::class.java))
             finish()
         }
+
+        binding.voltarMain.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 }
