@@ -1,16 +1,15 @@
 package com.example.medtime.activities.model
 
-import android.app.DatePickerDialog
-import java.sql.Time
-import java.util.Date
-
 
 data class Medicamento(
-    //adicionar hora,ide ajeitar a data (provavelmente ja expliquei sobre)
+
+    //ajeitar os atributos(botei string para testes)!
     val foto: Int,
     val nome: String,
     val dosagem: String,
-    val data: String
+    val dataI: String,
+    val dataF: String,
+    val hora: String
 
 
 )

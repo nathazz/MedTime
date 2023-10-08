@@ -27,7 +27,9 @@ class AdapterMedicamento(private val contexto: Context, private val medicamentos
         holder.foto.setImageResource(medicamentos[position].foto)
         holder.nome.text = medicamentos[position].nome
         holder.dosagem.text = medicamentos[position].dosagem
-        holder.data.text = medicamentos[position].data
+        holder.dataI.text = medicamentos[position].dataI
+        holder.dataF.text = medicamentos[position].dataF
+        holder.hora.text = medicamentos[position].hora
 
     }
 
@@ -42,8 +44,9 @@ class AdapterMedicamento(private val contexto: Context, private val medicamentos
         val foto = itemView.findViewById<ImageView>(R.id.fotoGota)
         val nome = itemView.findViewById<TextView>(R.id.titulo_med)
         val dosagem = itemView.findViewById<TextView>(R.id.dosagemMed)
-        val data = itemView.findViewById<TextView>(R.id.dataMed)
-
+        val dataI = itemView.findViewById<TextView>(R.id.dtIncio)
+        val dataF = itemView.findViewById<TextView>(R.id.dtFinal)
+        val hora = itemView.findViewById<TextView>(R.id.txtHorario)
 
     }
 

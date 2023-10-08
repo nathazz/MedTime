@@ -189,6 +189,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtNovoNome" />
 
     <CheckBox
+        android:id="@+id/checkCapsula"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:buttonTint="#FFFFFF"
@@ -201,6 +202,7 @@
         app:layout_constraintVertical_bias="0.627" />
 
     <CheckBox
+        android:id="@+id/checkInjecao"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:buttonTint="#FFFFFF"
@@ -211,6 +213,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <CheckBox
+        android:id="@+id/checkCaixinha"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -221,9 +224,9 @@
         app:layout_constraintTop_toTopOf="@+id/viewCaixinha" />
 
     <CheckBox
+        android:id="@+id/checkGotas"
         android:layout_width="48dp"
         android:layout_height="48dp"
-
         android:buttonTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewGotas"
         app:layout_constraintStart_toEndOf="@+id/ftGotas"

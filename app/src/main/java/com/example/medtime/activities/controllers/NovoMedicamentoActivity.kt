@@ -14,7 +14,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.flechaMedicamento.setOnClickListener {
-            startActivity(Intent(this,MedCadastrados::class.java))
+            startActivity(Intent(this, MedCadastrados::class.java))
             finish()
         }
 
@@ -22,5 +22,29 @@ class NovoMedicamentoActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
+
+        selecionarUmCheck()
     }
-}
+
+    fun selecionarUmCheck() {
+        val checkCapsula = binding.checkCapsula
+        val checkInjecao = binding.checkInjecao
+        val checkCaixinha = binding.checkCaixinha
+        val checkGotas = binding.checkGotas
+
+        val checkBoxes = listOf(checkCapsula, checkCaixinha, checkGotas, checkInjecao)
+
+        for (checkBox in checkBoxes) {
+            checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+                if (isChecked) {
+                    for (otherCheckBox in checkBoxes) {
+                        if (otherCheckBox != buttonView) {
+                            otherCheckBox.isChecked = false
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+    }

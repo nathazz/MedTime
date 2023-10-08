@@ -11,6 +11,7 @@
     >
 
 
+
     <ImageView
         android:id="@+id/fotoGota"
         android:layout_width="52dp"
@@ -39,7 +40,7 @@
         android:id="@+id/dosagemMed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="107dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="5dp"
         android:text="2x por dia"
@@ -50,12 +51,12 @@
         app:layout_constraintTop_toBottomOf="@+id/titulo_med" />
 
     <TextView
-        android:id="@+id/dataMed"
+        android:id="@+id/dtIncio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:textSize="14sp"
-        android:text="26 Jun - 28 Aug"
+        android:text="26 Jun"
         android:layout_marginTop="3dp"
         android:textColor="@color/azul_clr"
         app:layout_constraintStart_toEndOf="@+id/fotoGota"
@@ -85,8 +86,45 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/dataMed"
+        app:layout_constraintStart_toEndOf="@+id/dtIncio"
         app:srcCompat="@drawable/lixo" />
+
+    <TextView
+        android:id="@+id/txtHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/fotoGota"
+        app:layout_constraintTop_toBottomOf="@+id/dtIncio" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:text="-"
+        android:textColor="@color/azul_clr"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/dtIncio"
+        app:layout_constraintTop_toBottomOf="@+id/dosagemMed" />
+
+    <TextView
+        android:id="@+id/dtFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="36dp"
+        android:text="30 Jun"
+        android:textColor="@color/azul_clr"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deletarMed"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView12" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

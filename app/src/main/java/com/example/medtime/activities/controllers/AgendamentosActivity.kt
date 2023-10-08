@@ -49,7 +49,10 @@ class AgendamentosActivity : AppCompatActivity() {
             R.drawable.caixinha,
             "Vitamina C",
            "1x por dia",
-           "Tratamento diário"
+           "",
+           "",
+           ""
+
        )
         listaMedicamentos.add(medicamento1)
 
@@ -58,7 +61,10 @@ class AgendamentosActivity : AppCompatActivity() {
            R.drawable.injecao,
            "Insulina",
            "2x por dia",
-           "Tratamento diário"
+           "20 Jun",
+           "30 Out",
+           "10:00"
+
        )
         listaMedicamentos.add(medicamentos2)
 
