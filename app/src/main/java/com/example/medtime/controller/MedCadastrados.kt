@@ -41,7 +41,11 @@ class MedCadastrados : AppCompatActivity() {
         val adapterCadastrados = AdapterMedicamentos(this, medicamentos)
         req_cadastrados.adapter = adapterCadastrados
 
-        medicamentos.add(Medicamento(1, "dipirona", R.drawable.gotas.toByte()))
+        medicamentos.add(Medicamento(1, "dipirona", R.drawable.gotas.toByte()
+        )
+
+        )
+
 
     }
 }

@@ -32,16 +32,19 @@ class AgendamentosActivity : AppCompatActivity() {
 
 
     fun listarAgendamentos(){
+
         val re_medicamentos = binding.recyclerMedicamentos
             //lista na vertical
         re_medicamentos.layoutManager = LinearLayoutManager(this )
-        //re_medicamentos.setHasFixedSize(true)
+        re_medicamentos.setHasFixedSize(true)
 
 
         val listaAgendamento: MutableList<Agendamento> = mutableListOf()
         val adapterAgendamento = AdapterAgendamento(this, listaAgendamento)
 
         re_medicamentos.adapter = adapterAgendamento
+
+
 
 
 

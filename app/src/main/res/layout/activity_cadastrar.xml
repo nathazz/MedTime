@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Unidade de medida"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -65,19 +65,20 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSalvar"
         style="@style/btn_cadastro"
-        android:layout_marginTop="80dp"
         android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dataFinal" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHora"
+        app:layout_constraintVertical_bias="0.425" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="Dosagem"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -90,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Duração"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -100,8 +101,8 @@
 
     <EditText
         android:id="@+id/edtDosagem"
-       style="@style/edt_cadastro"
-        android:layout_marginTop="12dp"
+        style="@style/edt_cadastro"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Dosagem"
         android:inputType="text"
@@ -155,24 +156,23 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
         android:text="De"
         android:textColor="@color/azul_btn"
         android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/dataInicio"
         style="@style/txt_cadastro"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:drawableStart="@drawable/baseline_calendar_month_24"
         android:ems="10"
-        android:text="Selecionar data de inicio"
         android:inputType="text"
+        android:text="Selecionar data de inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -181,26 +181,48 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="12dp"
         android:text="Até"
         android:textColor="@color/azul_btn"
         android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dataInicio" />
 
     <TextView
         android:id="@+id/dataFinal"
         style="@style/txt_cadastro"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
-        android:text="Selecionar data de fim"
         android:inputType="text"
+        android:text="Selecionar data de fim"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/txtHora"
+        style="@style/txt_hora"
+        android:layout_marginTop="44dp"
+        android:text="Selecionar horário"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataFinal" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:text="Horário"
+        android:textColor="@color/azul_btn"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataFinal" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

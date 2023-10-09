@@ -9,6 +9,7 @@ class ConexaoDB(context : Context) : SQLiteOpenHelper(context, NAME,null, VERSIO
         private val NAME : String = "medtime_db"
         private val VERSION : Int = 1
     }
+
     override fun onCreate(medtime_db : SQLiteDatabase) {
         medtime_db.execSQL("CREATE TABLE IF NOT EXISTS medicamentos (\n" +
                 "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +

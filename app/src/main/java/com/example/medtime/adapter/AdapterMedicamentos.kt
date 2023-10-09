@@ -18,12 +18,15 @@ class AdapterMedicamentos(private val context : Context, private val medicamento
 
             return viewHolder
     }
+
+
     override fun onBindViewHolder(holder: MedicamentosViewHolder, position: Int) {
 
         holder.foto.setImageResource(medicamentos[position].getImagem().toInt())
         holder.nome.text = medicamentos[position].getNome()
 
     }
+
     override fun getItemCount(): Int  = medicamentos.size
     inner  class MedicamentosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

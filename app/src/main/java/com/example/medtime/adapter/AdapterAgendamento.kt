@@ -25,7 +25,6 @@ class AdapterAgendamento(private val contexto: Context, private val agendamentos
     override fun onBindViewHolder(holder: MedicamentoViewHolder, position: Int) {
 
         holder.foto.setImageResource(agendamentos[position].getMedicamento().getImagem().toInt())
-        holder.dosagem.text = agendamentos[position].getDosagem().toString()
         holder.dataI.text = agendamentos[position].getDataDeInicio().toString()
         holder.dataF.text = agendamentos[position].getDataDoFim().toString()
         holder.hora.text = agendamentos[position].getHorario().toString()
@@ -40,9 +39,9 @@ class AdapterAgendamento(private val contexto: Context, private val agendamentos
     inner class  MedicamentoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             //da pra usar o binding, mas usei esse por causa de segurança mesmo
+
         val foto = itemView.findViewById<ImageView>(R.id.fotoGota)
         val nome = itemView.findViewById<TextView>(R.id.titulo_med)
-        val dosagem = itemView.findViewById<TextView>(R.id.dosagemMed)
         val dataI = itemView.findViewById<TextView>(R.id.dtIncio)
         val dataF = itemView.findViewById<TextView>(R.id.dtFinal)
         val hora = itemView.findViewById<TextView>(R.id.txtHorario)
