@@ -1,4 +1,4 @@
-package com.example.medtime.activities.adapter
+package com.example.medtime.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,14 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.medtime.R
-import com.example.medtime.activities.model.Medicamento
+import com.example.medtime.model.dto.Agendamento
 
 //adaptando o recyclerView para um MutableList
-class AdapterMedicamento(private val contexto: Context, private val medicamentos: MutableList<Medicamento>) : RecyclerView.Adapter<AdapterMedicamento.MedicamentoViewHolder>() {
+class AdapterAgendamento(private val contexto: Context, private val agendamentos: MutableList<Agendamento>) : RecyclerView.Adapter<AdapterAgendamento.MedicamentoViewHolder>() {
 
         //metodo responsável por criar os itens
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicamentoViewHolder {
-        val itemLista = LayoutInflater.from(contexto).inflate(R.layout.medicamentos_item, parent, false)
+        val itemLista = LayoutInflater.from(contexto).inflate(R.layout.agendamento_item, parent, false)
         val holder = MedicamentoViewHolder(itemLista)
         return holder
     }
@@ -24,17 +24,16 @@ class AdapterMedicamento(private val contexto: Context, private val medicamentos
     //metodo responsavel por exibir as visualizações pro usuario(ver todos os itens da nossa lista)
     override fun onBindViewHolder(holder: MedicamentoViewHolder, position: Int) {
 
-        holder.foto.setImageResource(medicamentos[position].foto)
-        holder.nome.text = medicamentos[position].nome
-        holder.dosagem.text = medicamentos[position].dosagem
-        holder.dataI.text = medicamentos[position].dataI
-        holder.dataF.text = medicamentos[position].dataF
-        holder.hora.text = medicamentos[position].hora
+        holder.foto.setImageResource(agendamentos[position].getMedicamento().getImagem().toInt())
+        holder.dosagem.text = agendamentos[position].getDosagem().toString()
+        holder.dataI.text = agendamentos[position].getDataDeInicio().toString()
+        holder.dataF.text = agendamentos[position].getDataDoFim().toString()
+        holder.hora.text = agendamentos[position].getHorario().toString()
 
     }
 
         //passar o tamanho da lista(tamanho total)
-    override fun getItemCount(): Int = medicamentos.size
+    override fun getItemCount(): Int = agendamentos.size
 
 
         //inicialização das variaveis(ajeitar data,id e hora)
@@ -52,3 +51,4 @@ class AdapterMedicamento(private val contexto: Context, private val medicamentos
 
 
 }
+

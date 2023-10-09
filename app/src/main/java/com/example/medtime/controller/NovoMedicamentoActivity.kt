@@ -1,9 +1,8 @@
-package com.example.medtime.activities.controllers
+package com.example.medtime.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.medtime.R
 import com.example.medtime.databinding.ActivityNovoMedicamentoBinding
 
 class NovoMedicamentoActivity : AppCompatActivity() {

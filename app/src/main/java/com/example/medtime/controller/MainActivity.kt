@@ -1,4 +1,4 @@
-package com.example.medtime.activities.controllers
+package com.example.medtime.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

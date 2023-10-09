@@ -1,13 +1,13 @@
-package com.example.medtime.activities.controllers
+package com.example.medtime.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medtime.R
-import com.example.medtime.activities.adapter.AdapterCadastrados
-import com.example.medtime.activities.model.MedCadastrado
+import com.example.medtime.adapter.AdapterMedicamentos
 import com.example.medtime.databinding.ActivityMedCadastradosBinding
+import com.example.medtime.model.dto.Medicamento
 
 class MedCadastrados : AppCompatActivity() {
 
@@ -26,10 +26,10 @@ class MedCadastrados : AppCompatActivity() {
             startActivity(Intent(this, NovoMedicamentoActivity::class.java))
         }
 
-        listaCadastrados()
+        listaMedicamentos()
     }
 
-    fun listaCadastrados(){
+    fun listaMedicamentos(){
 
         val req_cadastrados = binding.recyclerCadastrados
         req_cadastrados.layoutManager = LinearLayoutManager(this)
@@ -37,31 +37,11 @@ class MedCadastrados : AppCompatActivity() {
 
         //configurar adapter
 
-        val listCadastrados: MutableList<MedCadastrado> = mutableListOf()
-        val adapterCadastrados = AdapterCadastrados(this, listCadastrados)
+        val medicamentos: MutableList<Medicamento> = mutableListOf()
+        val adapterCadastrados = AdapterMedicamentos(this, medicamentos)
         req_cadastrados.adapter = adapterCadastrados
 
-        val item1 = MedCadastrado(
-            R.drawable.gotas,
-            "Clonazepam"
-        )
-
-        listCadastrados.add(item1)
-
-
-        val item2 = MedCadastrado(
-            R.drawable.injecao,
-            "Injeção Mounjaro"
-        )
-
-        listCadastrados.add(item2)
-
-        val item3 = MedCadastrado(
-            R.drawable.capsula,
-            "Floratil"
-        )
-
-        listCadastrados.add(item3)
+        medicamentos.add(Medicamento(1, "dipirona", R.drawable.gotas.toByte()))
 
     }
 }

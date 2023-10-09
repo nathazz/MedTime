@@ -1,14 +1,14 @@
-package com.example.medtime.activities.controllers
+package com.example.medtime.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.medtime.R
-import com.example.medtime.activities.adapter.AdapterMedicamento
-import com.example.medtime.activities.model.Medicamento
+import com.example.medtime.adapter.AdapterAgendamento
+import com.example.medtime.model.dto.Medicamento
 import com.example.medtime.databinding.ActivityAgendamentoBinding
+import com.example.medtime.model.dto.Agendamento
 
 class AgendamentosActivity : AppCompatActivity() {
 
@@ -27,46 +27,22 @@ class AgendamentosActivity : AppCompatActivity() {
             startActivity(Intent(this, CadastrarActivity::class.java))
         }
 
-        listarMedicamentos()
+        listarAgendamentos()
     }
 
 
-    fun listarMedicamentos(){
+    fun listarAgendamentos(){
         val re_medicamentos = binding.recyclerMedicamentos
             //lista na vertical
         re_medicamentos.layoutManager = LinearLayoutManager(this )
-        re_medicamentos.setHasFixedSize(true)
+        //re_medicamentos.setHasFixedSize(true)
 
 
-        //configurar o Adapter
+        val listaAgendamento: MutableList<Agendamento> = mutableListOf()
+        val adapterAgendamento = AdapterAgendamento(this, listaAgendamento)
 
-        val listaMedicamentos: MutableList<Medicamento> = mutableListOf()
-        val adapterMedicamento = AdapterMedicamento(this, listaMedicamentos)
+        re_medicamentos.adapter = adapterAgendamento
 
-        re_medicamentos.adapter = adapterMedicamento
-
-       val medicamento1 = Medicamento(
-            R.drawable.caixinha,
-            "Vitamina C",
-           "1x por dia",
-           "",
-           "",
-           ""
-
-       )
-        listaMedicamentos.add(medicamento1)
-
-
-       val medicamentos2 = Medicamento(
-           R.drawable.injecao,
-           "Insulina",
-           "2x por dia",
-           "20 Jun",
-           "30 Out",
-           "10:00"
-
-       )
-        listaMedicamentos.add(medicamentos2)
 
 
 

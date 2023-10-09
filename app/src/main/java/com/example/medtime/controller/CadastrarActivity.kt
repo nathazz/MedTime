@@ -1,4 +1,4 @@
-package com.example.medtime.activities.controllers
+package com.example.medtime.controller
 
 import android.app.DatePickerDialog
 import android.content.Intent
