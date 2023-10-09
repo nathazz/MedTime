@@ -12,7 +12,6 @@ class Agendamento(
     private var unidadeDeMedida : String,
     private var dosagem : Float
 ) {
-
     fun getId() : Int {
         return id
     }
