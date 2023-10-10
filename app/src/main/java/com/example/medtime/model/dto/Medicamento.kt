@@ -2,11 +2,14 @@ package com.example.medtime.model.dto
 
 
 class Medicamento(
-    private var id : Int,
+    private var id : Int?,
     private var nome : String,
     private var imagem : Byte
 ){
-    fun getId() : Int{
+
+
+
+    fun getId() : Int?{
         return id
     }
 

@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medtime.adapter.AdapterMedicamentos
 import com.example.medtime.databinding.ActivityMedCadastradosBinding
+import com.example.medtime.model.dao.MedicamentoDAO
 import com.example.medtime.model.dto.Medicamento
 
 class MedCadastrados : AppCompatActivity() {
@@ -25,24 +26,16 @@ class MedCadastrados : AppCompatActivity() {
             startActivity(Intent(this, NovoMedicamentoActivity::class.java))
         }
 
-        listarMedicamentos()
+        exibirMedicamentos()
     }
 
-    fun listarMedicamentos(){
+    fun exibirMedicamentos(){
+        val medicamentoDAO = MedicamentoDAO(this)
 
         val req_cadastrados = binding.recyclerCadastrados
         req_cadastrados.layoutManager = LinearLayoutManager(this)
         req_cadastrados.setHasFixedSize(false)
 
-        //configurar adapter
-
-        val medicamentos: MutableList<Medicamento> = mutableListOf()
-        medicamentos.add(Medicamento(20,"Dipirona", 3))
-        medicamentos.add(Medicamento(22,"Dipirona", 2))
-        medicamentos.add(Medicamento(22,"Dipirona", 1))
-        medicamentos.add(Medicamento(22,"Dipirona", 4))
-
-        val adapterMedicamentos = AdapterMedicamentos(this, medicamentos)
-        req_cadastrados.adapter = adapterMedicamentos
+        req_cadastrados.adapter =  AdapterMedicamentos(this, medicamentoDAO.listarMedicamentos().toMutableList())
     }
 }
