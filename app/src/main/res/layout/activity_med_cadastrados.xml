@@ -50,16 +50,17 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:srcCompat="@drawable/add"
         android:id="@+id/btnFlutuanteCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:contentDescription="null"
-        app:backgroundTint="@color/azul_btn"
+        app:backgroundTint="#10AE59"
         android:layout_marginBottom="36dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/add" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

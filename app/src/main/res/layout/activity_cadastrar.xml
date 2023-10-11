@@ -16,7 +16,7 @@
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.018" />
@@ -25,14 +25,14 @@
         android:id="@+id/nv_agend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Novo Agendamento"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:letterSpacing="0.1"
+        android:text="Novo Agendamento"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seta" />
 
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:text="Qual o nome do medicamento?"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -65,20 +65,21 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSalvar"
         style="@style/btn_cadastro"
+        android:layout_width="215dp"
+        android:layout_height="50dp"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHora"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:text="Dosagem"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -91,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="Duração"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -112,12 +113,8 @@
 
     <Spinner
         android:id="@+id/spinMedicamento"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:elevation="5dp"
-        android:layout_marginHorizontal="70dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bg_spinner"
+        style="@style/snipper_custom"
+        android:layout_marginTop="8dp"
         android:pointerIcon="arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,8 +134,9 @@
     <Spinner
         android:id="@+id/spinMedida"
         style="@style/snipper_custom"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -157,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="De"
         android:textColor="@color/azul_btn"
         android:textSize="13sp"
@@ -182,7 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="Até"
         android:textColor="@color/azul_btn"
         android:textSize="13sp"
@@ -198,16 +196,17 @@
         android:inputType="text"
         android:text="Selecionar data de fim"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/txtHora"
         style="@style/txt_hora"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:text="Selecionar horário"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dataFinal" />
 
@@ -216,7 +215,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Horário"
         android:textColor="@color/azul_btn"
         android:textSize="13sp"

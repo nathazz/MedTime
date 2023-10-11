@@ -32,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seta2" />
 
+
     <ImageView
         android:id="@+id/seta2"
         android:layout_width="35dp"
@@ -51,7 +52,7 @@
         android:layout_marginBottom="56dp"
         android:clickable="true"
         android:contentDescription="null"
-        app:backgroundTint="@color/azul_btn"
+        app:backgroundTint="#10AE59"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/add" />

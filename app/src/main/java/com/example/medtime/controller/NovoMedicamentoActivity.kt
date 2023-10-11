@@ -32,7 +32,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
         selecionarUmCheck()
     }
 
-    fun selecionarUmCheck() {
+    private fun selecionarUmCheck() {
         val checkCapsula = binding.checkCapsula
         val checkInjecao = binding.checkInjecao
         val checkCaixinha = binding.checkCaixinha
@@ -54,7 +54,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
 
     }
 
-    fun imageSelecionada(): Byte {
+    private fun imageSelecionada(): Byte {
         val checkCapsula = binding.checkCapsula
         val checkInjecao = binding.checkInjecao
         val checkCaixinha = binding.checkCaixinha
@@ -75,7 +75,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
         return imagem
     }
 
-    fun salvarMedicamento() {
+    private fun salvarMedicamento() {
         medicamentoDAO = MedicamentoDAO(this@NovoMedicamentoActivity)
 
         medicamentoDAO.cadastrarMedicamento(
@@ -91,7 +91,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
 
     }
 
-    fun limparCampos() {
+   private fun limparCampos() {
         binding.edtNovoNome.setText("")
         binding.checkCaixinha.isChecked = false
         binding.checkCapsula.isChecked = false
@@ -99,7 +99,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
         binding.checkGotas.isChecked = false
     }
 
-    fun voltarMedCadastrados() {
+    private fun voltarMedCadastrados() {
         startActivity(Intent(this, MedCadastrados::class.java))
         finish()
     }

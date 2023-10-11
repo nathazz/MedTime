@@ -87,13 +87,13 @@
     <style name="snipper_custom">
         <item name="android:background">@drawable/bg_spinner</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">48dp</item>
         <item name="elevation">5dp</item>
         <item name="android:layout_marginHorizontal">70dp</item>
     </style>
 
     <style name="edt_cadastro">
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_marginHorizontal">70dp</item>
         <item name="android:textColor">@color/black</item>
@@ -117,12 +117,12 @@
     </style>
 
     <style name="txt_cadastro">
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_marginHorizontal">70dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">11sp</item>
         <item name="android:padding">18dp</item>
         <item name="android:background">@drawable/bg_dosagem</item>
         <item name="android:drawableStart">@drawable/baseline_calendar_month_24</item>
@@ -130,12 +130,12 @@
     </style>
 
     <style name="txt_hora">
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_marginHorizontal">70dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">11sp</item>
         <item name="android:padding">18dp</item>
         <item name="android:background">@drawable/bg_dosagem</item>
         <item name="android:drawableStart">@drawable/baseline_access_time_24</item>

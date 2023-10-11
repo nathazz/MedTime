@@ -8,7 +8,6 @@
     tools:context=".controller.NovoMedicamentoActivity">
 
 
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -60,60 +59,88 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView9" />
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSalvarNovo"
         android:layout_width="229dp"
         android:layout_height="73dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/bg_btncadastro"
         android:letterSpacing="0.1"
         android:text="Salvar"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCaixinha" />
 
+
+    <View
+        android:id="@+id/viewGotas"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/bg_tbn_imagens"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toEndOf="@+id/viewCaixinha"
+        app:layout_constraintTop_toBottomOf="@+id/viewInjecao" />
+
     <View
         android:id="@+id/viewCaixinha"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bg_tbn_imagens"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCapsula" />
 
     <View
-        android:id="@+id/viewGotas"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_tbn_imagens"
-        app:layout_constraintStart_toEndOf="@+id/viewCaixinha"
-        app:layout_constraintTop_toBottomOf="@+id/viewInjecao" />
-
-
-    <View
-        android:id="@+id/viewInjecao"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_tbn_imagens"
-        app:layout_constraintStart_toEndOf="@+id/viewCapsula"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <View
         android:id="@+id/viewCapsula"
-        android:layout_width="110dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bg_tbn_imagens"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <View
+        android:id="@+id/viewInjecao"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:background="@drawable/bg_tbn_imagens"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toEndOf="@+id/viewCapsula"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <CheckBox
+        android:id="@+id/checkCapsula"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
+        android:buttonTint="#FFFFFF"
+        android:elevation="2dp"
+        android:padding="15dp"
+        android:src="@drawable/capsula"
+        app:layout_constraintBottom_toBottomOf="@+id/viewCapsula"
+        app:layout_constraintStart_toStartOf="@+id/viewCapsula" />
+
+    <CheckBox
+        android:id="@+id/checkInjecao"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
+        android:buttonTint="#FFFFFF"
+        android:src="@drawable/injecao"
+        app:layout_constraintBottom_toBottomOf="@+id/viewInjecao"
+        app:layout_constraintStart_toStartOf="@+id/viewInjecao" />
 
     <ImageView
         android:id="@+id/voltarMain"
@@ -121,66 +148,68 @@
         android:layout_height="34dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:src="@drawable/baseline_home_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/baseline_home_24" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
         android:id="@+id/ftGotas"
-        android:layout_width="50dp"
+        android:layout_width="52dp"
         android:layout_height="45dp"
         android:elevation="2dp"
         android:src="@drawable/gotas"
         app:layout_constraintBottom_toBottomOf="@+id/viewGotas"
         app:layout_constraintEnd_toEndOf="@+id/viewGotas"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="@+id/viewGotas"
-        app:layout_constraintTop_toTopOf="@+id/viewGotas" />
+        app:layout_constraintTop_toTopOf="@+id/viewGotas"
+        app:layout_constraintVertical_bias="0.566" />
 
     <ImageView
         android:id="@+id/ftInjecao"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
+        android:layout_width="55dp"
+        android:layout_height="46dp"
         android:elevation="2dp"
         android:src="@drawable/injecao"
         app:layout_constraintBottom_toBottomOf="@+id/viewInjecao"
         app:layout_constraintEnd_toEndOf="@+id/viewInjecao"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="@+id/viewInjecao"
-        app:layout_constraintTop_toTopOf="@+id/viewInjecao" />
-
+        app:layout_constraintTop_toTopOf="@+id/viewInjecao"
+        app:layout_constraintVertical_bias="0.433" />
 
     <ImageView
         android:id="@+id/ftCaixinha"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
         android:elevation="2dp"
         android:src="@drawable/caixinha"
         app:layout_constraintBottom_toBottomOf="@+id/viewCaixinha"
         app:layout_constraintEnd_toEndOf="@+id/viewCaixinha"
-        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="@+id/viewCaixinha"
-        app:layout_constraintTop_toTopOf="@+id/viewCaixinha" />
+        app:layout_constraintTop_toTopOf="@+id/viewCaixinha"
+        app:layout_constraintVertical_bias="0.571" />
 
     <ImageView
         android:id="@+id/ftCapsula"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
-        android:elevation="3dp"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
         android:src="@drawable/capsula"
         app:layout_constraintBottom_toBottomOf="@+id/viewCapsula"
         app:layout_constraintEnd_toEndOf="@+id/viewCapsula"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="@+id/viewCapsula"
-        app:layout_constraintTop_toTopOf="@+id/viewCapsula" />
+        app:layout_constraintTop_toTopOf="@+id/viewCapsula"
+        app:layout_constraintVertical_bias="0.525" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:text="Escolha uma imagem"
         android:textColor="@color/azul_btn"
         android:textSize="16sp"
@@ -189,49 +218,22 @@
         app:layout_constraintTop_toBottomOf="@+id/edtNovoNome" />
 
     <CheckBox
-        android:id="@+id/checkCapsula"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:buttonTint="#FFFFFF"
-        android:src="@drawable/capsula"
-        app:layout_constraintBottom_toTopOf="@+id/viewCaixinha"
-        app:layout_constraintEnd_toStartOf="@+id/viewInjecao"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/ftCapsula"
-        app:layout_constraintTop_toTopOf="@+id/viewCapsula"
-        app:layout_constraintVertical_bias="0.627" />
-
-    <CheckBox
-        android:id="@+id/checkInjecao"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:buttonTint="#FFFFFF"
-        android:src="@drawable/injecao"
-        app:layout_constraintBottom_toBottomOf="@+id/viewInjecao"
-        app:layout_constraintStart_toEndOf="@+id/ftInjecao"
-        app:layout_constraintTop_toTopOf="@+id/viewInjecao"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <CheckBox
         android:id="@+id/checkCaixinha"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="36dp"
         android:buttonTint="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/viewGotas"
-        app:layout_constraintStart_toEndOf="@+id/ftCaixinha"
-        app:layout_constraintTop_toTopOf="@+id/viewCaixinha" />
+        app:layout_constraintBottom_toBottomOf="@+id/viewCaixinha"
+        app:layout_constraintStart_toStartOf="@+id/viewCaixinha" />
 
     <CheckBox
         android:id="@+id/checkGotas"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
         android:buttonTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/viewGotas"
-        app:layout_constraintStart_toEndOf="@+id/ftGotas"
-        app:layout_constraintTop_toTopOf="@+id/viewGotas"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="@+id/viewGotas" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
