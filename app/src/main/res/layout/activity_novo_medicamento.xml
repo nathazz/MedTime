@@ -8,6 +8,18 @@
     tools:context=".controller.NovoMedicamentoActivity">
 
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu"
+        android:background="@color/azul_escuro"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -64,17 +76,15 @@
         android:id="@+id/btnSalvarNovo"
         android:layout_width="229dp"
         android:layout_height="73dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bg_btncadastro"
         android:letterSpacing="0.1"
         android:text="Salvar"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewCaixinha" />
-
 
     <View
         android:id="@+id/viewGotas"

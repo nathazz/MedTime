@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:title="Início"
+        android:icon="@drawable/inicio"
+        />
+
+    <item
+        android:id="@+id/medicamentos"
+        android:title="Medicamentos"
+        android:icon="@drawable/pilula2"
+        />
+    <item
+        android:id="@+id/agendamentos"
+        android:title="Agendamentos"
+        android:icon="@drawable/baseline_checklist_24"
+        />
+</menu>

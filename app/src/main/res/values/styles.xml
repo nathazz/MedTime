@@ -54,9 +54,9 @@
 
     <!--- Style main-->
     <style name="card_main">
-        <item name="android:layout_width">280dp</item>
-        <item name="android:layout_height">95dp</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_width">275dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_marginTop">10dp</item>
         <item name="android:backgroundTint">@color/azul_btn</item>
     </style>
 
@@ -106,7 +106,7 @@
 
     <style name="btn_cadastro">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_height">50dp</item>
         <item name="android:layout_marginHorizontal">95dp</item>
         <item name="android:background">@drawable/bg_btncadastro</item>
         <item name="android:letterSpacing">0.1</item>

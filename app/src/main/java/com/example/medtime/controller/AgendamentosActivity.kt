@@ -10,6 +10,7 @@ import com.example.medtime.model.dto.Medicamento
 import com.example.medtime.databinding.ActivityAgendamentoBinding
 import com.example.medtime.model.dto.Agendamento
 
+@Suppress("DEPRECATION")
 class AgendamentosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAgendamentoBinding
@@ -23,19 +24,21 @@ class AgendamentosActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.btnFlutuante.setOnClickListener{
+        binding.btnFlutuante.setOnClickListener {
             startActivity(Intent(this, CadastrarActivity::class.java))
         }
 
         listarAgendamentos()
+        navegar()
+
     }
 
 
-    fun listarAgendamentos(){
+    fun listarAgendamentos() {
 
         val re_medicamentos = binding.recyclerMedicamentos
-            //lista na vertical
-        re_medicamentos.layoutManager = LinearLayoutManager(this )
+        //lista na vertical
+        re_medicamentos.layoutManager = LinearLayoutManager(this)
         re_medicamentos.setHasFixedSize(true)
 
 
@@ -44,11 +47,40 @@ class AgendamentosActivity : AppCompatActivity() {
 
         re_medicamentos.adapter = adapterAgendamento
 
+    }
+
+    fun navegar() {
+        val bottomBar = binding.bottomBar
+        bottomBar.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.agendamentos -> {
+
+                    true
+                }
 
 
+                R.id.inicio -> {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                    true
+                }
 
+                R.id.medicamentos -> {
+
+                    startActivity(Intent(this, MedCadastrados::class.java))
+
+                    finish()
+
+                    true
+                }
+
+                else -> false
+            }
+
+        }
 
 
     }
 
-}
+    }
+

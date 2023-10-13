@@ -8,6 +8,25 @@
     tools:context=".controller.MainActivity">
 
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu"
+        android:background="@color/azul_escuro"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
+        />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/novoAgend"
         style="@style/btn_main"
@@ -19,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/medsCadastrados"
         app:layout_constraintTop_toBottomOf="@+id/viewMain"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/medsCadastrados"
@@ -96,17 +115,15 @@
         android:contentDescription="no"
         android:src="@drawable/pill"
         app:layout_constraintBottom_toBottomOf="@+id/fundo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fundo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
         tools:ignore="HardcodedText" />
 
     <View
         android:id="@+id/viewMain"
-        android:layout_width="308dp"
-        android:layout_height="183dp"
+        android:layout_width="295dp"
+        android:layout_height="165dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="188dp"
         android:background="@drawable/bg_container"
@@ -124,7 +141,7 @@
         android:letterSpacing="0.1"
         android:text="Sua próxima medicação está \nagendada para"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/viewMain"
         app:layout_constraintEnd_toEndOf="@+id/viewMain"
@@ -149,7 +166,7 @@
             android:id="@+id/txtDia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:letterSpacing="0.1"
             android:text="Hoje"
@@ -161,20 +178,20 @@
             android:id="@+id/txtHoras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
             android:letterSpacing="0.1"
             android:text="19:30"
             android:textColor="@color/verde_clr"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtMed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="55dp"
             android:letterSpacing="0.1"
             android:text="Paracentamol"
             android:textColor="@color/white"
@@ -185,8 +202,8 @@
             android:id="@+id/txtDosagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="55dp"
             android:letterSpacing="0.1"
             android:text="50mg"
             android:textColor="@color/azul_clr"

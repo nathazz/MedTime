@@ -15,6 +15,7 @@ import java.util.Locale
 import java.util.TimeZone
 
 
+@Suppress("DEPRECATION")
 class CadastrarActivity : AppCompatActivity() {
 
 
@@ -24,10 +25,12 @@ class CadastrarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
         binding.seta.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
     }
+
 
         //selecionarData
         binding.dataInicio.setOnClickListener {
@@ -39,9 +42,12 @@ class CadastrarActivity : AppCompatActivity() {
         }
 
 
-
         configurarSpinner()
         selecionarHorario()
+
+
+
+
     }
 
     /*Apenas um teste(mudar conforme o tempo)*/
@@ -97,7 +103,7 @@ class CadastrarActivity : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-        private fun selecionarHorario(){
+        private fun selecionarHorario() {
 
             val txtHora = binding.txtHora
 
@@ -107,21 +113,32 @@ class CadastrarActivity : AppCompatActivity() {
                 val timeZone = TimeZone.getTimeZone("America/Sao_Paulo")
                 cal.timeZone = timeZone
 
-                val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hora, minuto ->
-                    cal.set(Calendar.HOUR_OF_DAY,hora)
-                    cal.set(Calendar.MINUTE,minuto)
+                val timeSetListener =
+                    TimePickerDialog.OnTimeSetListener { timePicker, hora, minuto ->
+                        cal.set(Calendar.HOUR_OF_DAY, hora)
+                        cal.set(Calendar.MINUTE, minuto)
 
-                    txtHora.text = SimpleDateFormat("HH:mm").format(cal.time)
+                        txtHora.text = SimpleDateFormat("HH:mm").format(cal.time)
 
-                }
-                TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
+                    }
+                TimePickerDialog(
+                    this,
+                    timeSetListener,
+                    cal.get(Calendar.HOUR_OF_DAY),
+                    cal.get(Calendar.MINUTE),
+                    true
+                ).show()
             }
+
+        }
+
 
 
         }
 
 
-}
+
+
 
 
 
