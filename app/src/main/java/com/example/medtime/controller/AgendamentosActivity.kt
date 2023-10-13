@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medtime.R
 import com.example.medtime.adapter.AdapterAgendamento
-import com.example.medtime.model.dto.Medicamento
 import com.example.medtime.databinding.ActivityAgendamentoBinding
 import com.example.medtime.model.dto.Agendamento
 
@@ -34,53 +33,44 @@ class AgendamentosActivity : AppCompatActivity() {
     }
 
 
-    fun listarAgendamentos() {
+   private fun listarAgendamentos() {
 
-        val re_medicamentos = binding.recyclerMedicamentos
+        val reMedicamentos = binding.recyclerMedicamentos
         //lista na vertical
-        re_medicamentos.layoutManager = LinearLayoutManager(this)
-        re_medicamentos.setHasFixedSize(true)
+        reMedicamentos.layoutManager = LinearLayoutManager(this)
+        reMedicamentos.setHasFixedSize(true)
 
 
         val listaAgendamento: MutableList<Agendamento> = mutableListOf()
         val adapterAgendamento = AdapterAgendamento(this, listaAgendamento)
 
-        re_medicamentos.adapter = adapterAgendamento
+        reMedicamentos.adapter = adapterAgendamento
 
     }
 
-    fun navegar() {
+   private  fun navegar() {
         val bottomBar = binding.bottomBar
-        bottomBar.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.agendamentos -> {
+       bottomBar.menu.findItem(R.id.agendamentos).isChecked = true
 
-                    true
-                }
-
-
-                R.id.inicio -> {
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
-                    true
-                }
-
-                R.id.medicamentos -> {
-
-                    startActivity(Intent(this, MedCadastrados::class.java))
-
-                    finish()
-
-                    true
-                }
-
-                else -> false
-            }
-
-        }
+       bottomBar.setOnNavigationItemSelectedListener { menuItem ->
+           when (menuItem.itemId) {
+               R.id.agendamentos -> true
+               R.id.inicio -> {
+                   startActivity(Intent(this, MainActivity::class.java))
+                   finish()
+                   true
+               }
+               R.id.medicamentos -> {
+                   startActivity(Intent(this, MedCadastrados::class.java))
+                   finish()
+                   true
+               }
+               else -> false
+           }
+       }
 
 
-    }
+   }
 
     }
 

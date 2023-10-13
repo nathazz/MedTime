@@ -22,10 +22,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.voltarMain.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
+
 
         binding.btnSalvarNovo.setOnClickListener {
             salvarMedicamento()
@@ -33,7 +30,8 @@ class NovoMedicamentoActivity : AppCompatActivity() {
 
 
 
-        navegar()
+
+        voltar()
         selecionarUmCheck()
     }
 
@@ -109,26 +107,24 @@ class NovoMedicamentoActivity : AppCompatActivity() {
         finish()
     }
 
-    fun navegar(){
+    private fun voltar() {
         val bottomBar = binding.bottomBar
+
+
+        bottomBar.menu.findItem(R.id.medicamentos).isChecked = true
+
         bottomBar.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-
                 R.id.medicamentos -> {
-
                     startActivity(Intent(this, MedCadastrados::class.java))
-
                     finish()
-
                     true
                 }
-
                 R.id.agendamentos -> {
                     startActivity(Intent(this, AgendamentosActivity::class.java))
                     finish()
                     true
                 }
-
                 R.id.inicio -> {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
@@ -136,9 +132,7 @@ class NovoMedicamentoActivity : AppCompatActivity() {
                 }
                 else -> false
             }
-
         }
-
     }
 
-}
+  }

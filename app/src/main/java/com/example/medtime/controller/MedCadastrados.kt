@@ -8,7 +8,6 @@ import com.example.medtime.R
 import com.example.medtime.adapter.AdapterMedicamentos
 import com.example.medtime.databinding.ActivityMedCadastradosBinding
 import com.example.medtime.model.dao.MedicamentoDAO
-import com.example.medtime.model.dto.Medicamento
 
 @Suppress("DEPRECATION")
 class MedCadastrados : AppCompatActivity() {
@@ -21,10 +20,15 @@ class MedCadastrados : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.flechaCadastrado.setOnClickListener {
+
+
+
             startActivity(Intent(this, MainActivity::class.java))
+
         }
 
         binding.btnFlutuanteCadastro.setOnClickListener {
+
             startActivity(Intent(this, NovoMedicamentoActivity::class.java))
         }
 
@@ -35,33 +39,31 @@ class MedCadastrados : AppCompatActivity() {
         navegar()
     }
 
-    fun exibirMedicamentos(){
+   private  fun exibirMedicamentos(){
         val medicamentoDAO = MedicamentoDAO(this)
 
-        val req_cadastrados = binding.recyclerCadastrados
-        req_cadastrados.layoutManager = LinearLayoutManager(this)
-        req_cadastrados.setHasFixedSize(false)
+        val reqCadastrados = binding.recyclerCadastrados
+        reqCadastrados.layoutManager = LinearLayoutManager(this)
+        reqCadastrados.setHasFixedSize(false)
 
-        req_cadastrados.adapter =  AdapterMedicamentos(this, medicamentoDAO.listarMedicamentos().toMutableList())
+        reqCadastrados.adapter =  AdapterMedicamentos(this, medicamentoDAO.listarMedicamentos().toMutableList())
     }
 
 
-    fun navegar(){
+    private fun navegar(){
         val bottomBar = binding.bottomBar
+
+        bottomBar.menu.findItem(R.id.medicamentos).isChecked = true
+
         bottomBar.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
 
-                R.id.medicamentos -> {
-
-                    true
-                }
-
+                R.id.medicamentos -> true
                 R.id.agendamentos -> {
                     startActivity(Intent(this, AgendamentosActivity::class.java))
                     finish()
                     true
                 }
-
                 R.id.inicio -> {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
@@ -69,7 +71,6 @@ class MedCadastrados : AppCompatActivity() {
                 }
                 else -> false
             }
-
         }
 
 

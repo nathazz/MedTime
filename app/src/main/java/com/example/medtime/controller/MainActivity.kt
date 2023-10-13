@@ -32,24 +32,22 @@ class MainActivity : AppCompatActivity() {
 
         bottomBar.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.inicio -> {
-                    true
-                }
-
                 R.id.medicamentos -> {
-
                     startActivity(Intent(this, MedCadastrados::class.java))
+                    finish()
                     true
                 }
-
                 R.id.agendamentos -> {
                     startActivity(Intent(this, AgendamentosActivity::class.java))
+                    finish()
                     true
                 }
-
+                R.id.inicio -> {
+                    bottomBar.menu.findItem(R.id.inicio).isChecked = true
+                    true
+                }
                 else -> false
             }
-
         }
 
     }
