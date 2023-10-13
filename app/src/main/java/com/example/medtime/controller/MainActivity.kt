@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         val bottomBar = binding.bottomBar
 
+
         bottomBar.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.medicamentos -> {
