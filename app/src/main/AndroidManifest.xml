@@ -13,10 +13,10 @@
         android:theme="@style/Theme.MedTime"
         tools:targetApi="31">
         <activity
-            android:name="com.example.medtime.controller.MedCadastrados"
+            android:name="com.example.medtime.controller.MedicamentosActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.medtime.controller.NovoMedicamentoActivity"
+            android:name="com.example.medtime.controller.CadastrarMedicamentoActivity"
             android:exported="false" />
         <activity
             android:name="com.example.medtime.controller.MedcadastradosActivity"
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.AgendamentoActivity" />
-        <activity android:name="com.example.medtime.controller.CadastrarActivity" />
+        <activity android:name="com.example.medtime.controller.CadastrarAgendamentoActivity" />
     </application>
 
 </manifest>

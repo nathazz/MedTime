@@ -16,7 +16,7 @@ import java.util.TimeZone
 
 
 @Suppress("DEPRECATION")
-class CadastrarActivity : AppCompatActivity() {
+class CadastrarAgendamentoActivity : AppCompatActivity() {
 
 
    private lateinit var binding: ActivityCadastrarBinding
@@ -93,7 +93,7 @@ class CadastrarActivity : AppCompatActivity() {
             }
 
             val datePickerDialog = DatePickerDialog(
-                this@CadastrarActivity,
+                this@CadastrarAgendamentoActivity,
                 data,
                 datePicker[Calendar.YEAR],
                 datePicker[Calendar.MONTH],

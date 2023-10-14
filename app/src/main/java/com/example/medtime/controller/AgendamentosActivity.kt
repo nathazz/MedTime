@@ -24,7 +24,7 @@ class AgendamentosActivity : AppCompatActivity() {
         }
 
         binding.btnFlutuante.setOnClickListener {
-            startActivity(Intent(this, CadastrarActivity::class.java))
+            startActivity(Intent(this, CadastrarAgendamentoActivity::class.java))
         }
 
         listarAgendamentos()
@@ -61,7 +61,7 @@ class AgendamentosActivity : AppCompatActivity() {
                    true
                }
                R.id.medicamentos -> {
-                   startActivity(Intent(this, MedCadastrados::class.java))
+                   startActivity(Intent(this, MedicamentosActivity::class.java))
                    finish()
                    true
                }

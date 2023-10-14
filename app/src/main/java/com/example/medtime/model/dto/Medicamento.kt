@@ -1,14 +1,8 @@
 package com.example.medtime.model.dto
 
+import java.io.Serializable
 
-class Medicamento(
-    private var id : Int?,
-    private var nome : String,
-    private var imagem : Byte
-){
-
-
-
+class Medicamento(private var id : Int?, private var nome : String, private var imagem : Byte) : Serializable {
     fun getId() : Int?{
         return id
     }
@@ -32,4 +26,5 @@ class Medicamento(
     override fun toString(): String {
         return "id: $id\nnome: $nome\nimagem: $imagem\n"
     }
+
 }

@@ -21,11 +21,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.novoAgend.setOnClickListener {
-            startActivity(Intent(this, CadastrarActivity::class.java))
+            startActivity(Intent(this, CadastrarAgendamentoActivity::class.java))
         }
 
         binding.medsCadastrados.setOnClickListener {
-            startActivity(Intent(this, MedCadastrados::class.java))
+            startActivity(Intent(this, MedicamentosActivity::class.java))
         }
 
         val bottomBar = binding.bottomBar
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         bottomBar.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.medicamentos -> {
-                    startActivity(Intent(this, MedCadastrados::class.java))
+                    startActivity(Intent(this, MedicamentosActivity::class.java))
                     finish()
                     true
                 }

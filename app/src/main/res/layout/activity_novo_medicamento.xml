@@ -5,23 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco_esc"
-    tools:context=".controller.NovoMedicamentoActivity">
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
-        app:menu="@menu/menu"
-        android:background="@color/azul_escuro"
-        app:itemTextColor="@color/white"
-        app:itemIconTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    tools:context=".controller.CadastrarMedicamentoActivity">
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -56,7 +43,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
     <TextView
         android:id="@+id/textView10"
@@ -69,7 +56,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="@+id/titulo" />
 
 
     <androidx.appcompat.widget.AppCompatButton

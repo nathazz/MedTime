@@ -11,12 +11,12 @@ class MedicamentoDAO(context: Context) {
     private val medTimeDB : SQLiteDatabase = conexaoDB.writableDatabase
 
     fun cadastrarMedicamento(medicamento: Medicamento){
-        val values = ContentValues()
+        val valores = ContentValues()
 
-        values.put("nome", medicamento.getNome())
-        values.put("ref_imagem", medicamento.getImagem())
+        valores.put("nome", medicamento.getNome())
+        valores.put("ref_imagem", medicamento.getImagem())
 
-        medTimeDB.insert("medicamentos", null, values)
+        medTimeDB.insert("medicamentos", null, valores)
     }
 
     fun listarMedicamentos(): List<Medicamento> {
@@ -37,13 +37,17 @@ class MedicamentoDAO(context: Context) {
         return listaMedicamentos
     }
 
-    fun atualizarMedicamento(){
+    fun atualizarMedicamento(medicamento: Medicamento){
+        val valores = ContentValues()
 
+        valores.put("nome", medicamento.getNome())
+        valores.put("ref_imagem", medicamento.getImagem())
+
+        medTimeDB.update("medicamentos", valores, "id = ?", arrayOf(medicamento.getId().toString()))
     }
 
-    fun excluirMedicamento(){
-
+    fun excluirMedicamento(medicamento: Medicamento){
+        medTimeDB.delete("medicamentos", "id = ?", arrayOf(medicamento.getId().toString()))
     }
-
 
 }
