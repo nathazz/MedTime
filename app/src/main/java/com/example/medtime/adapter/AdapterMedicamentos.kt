@@ -51,7 +51,6 @@ class AdapterMedicamentos(private val context : Context, private val medicamento
                 .setPositiveButton("Sim") { dialog, which ->
 
                     medicamentoDAO.excluirMedicamento(medicamentos[position])
-
                     medicamentos.removeAt(position)
                     notifyItemRemoved(position)
                     notifyItemRangeChanged(position, medicamentos.size)

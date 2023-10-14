@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
 import android.view.View
+import androidx.core.view.isEmpty
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medtime.R
 import com.example.medtime.adapter.AdapterMedicamentos
@@ -47,6 +48,7 @@ class MedicamentosActivity : AppCompatActivity() {
         reqCadastrados.setHasFixedSize(false)
 
         reqCadastrados.adapter =  AdapterMedicamentos(this, medicamentoDAO.listarMedicamentos().toMutableList())
+
     }
 
     private fun navegar(){

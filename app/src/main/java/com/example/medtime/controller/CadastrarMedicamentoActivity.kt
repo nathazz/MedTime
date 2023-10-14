@@ -105,27 +105,60 @@ class CadastrarMedicamentoActivity : AppCompatActivity() {
     private fun salvarMedicamento() {
         medicamentoDAO = MedicamentoDAO(this@CadastrarMedicamentoActivity)
 
-        medicamentoDAO.cadastrarMedicamento(
-            Medicamento(
-                null,
-                binding.edtNovoNome.text.toString(),
-                imageSelecionada()
-            )
-        )
+        var erro : Int = 0
 
-        limparCampos()
-        voltarMedCadastrados()
+        if (binding.edtNovoNome.text.toString().isEmpty()) {
+            erro++
+            binding.edtNovoNome.error = "Preencha o nome do medicamento"
+
+        }
+
+        if (imageSelecionada() == 0.toByte()) {
+            erro++
+            Toast.makeText(this, "Selecione uma imagem", Toast.LENGTH_SHORT).show()
+
+        }
+
+        if(erro == 0){
+            medicamentoDAO.cadastrarMedicamento(
+                Medicamento(
+                    null,
+                    binding.edtNovoNome.text.toString(),
+                    imageSelecionada()
+                )
+            )
+
+            limparCampos()
+            voltarMedCadastrados()
+        }
 
     }
 
     private fun editarMedicamento(medicamento: Medicamento){
         medicamentoDAO = MedicamentoDAO(this@CadastrarMedicamentoActivity)
 
-        medicamentoDAO.atualizarMedicamento(medicamento)
+        var erro : Int = 0
 
-        Toast.makeText(this, "Medicamento alterado com sucesso!", Toast.LENGTH_SHORT).show()
-        limparCampos()
-        voltarMedCadastrados()
+        if (binding.edtNovoNome.text.toString().isEmpty()) {
+            erro++
+            binding.edtNovoNome.error = "Preencha o nome do medicamento"
+
+        }
+
+        if (imageSelecionada() == 0.toByte()) {
+            erro++
+            Toast.makeText(this, "Selecione uma imagem", Toast.LENGTH_SHORT).show()
+
+        }
+
+        if(erro == 0){
+            medicamentoDAO.atualizarMedicamento(medicamento)
+
+            Toast.makeText(this, "Medicamento alterado com sucesso!", Toast.LENGTH_SHORT).show()
+            limparCampos()
+            voltarMedCadastrados()
+        }
+
     }
 
    private fun limparCampos() {
