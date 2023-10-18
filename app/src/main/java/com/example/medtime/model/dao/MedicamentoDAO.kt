@@ -37,6 +37,19 @@ class MedicamentoDAO(context: Context) {
         return listaMedicamentos
     }
 
+    fun pegarMedicamentoPorId(id: Int): Medicamento {
+        val columns = arrayOf("id", "nome", "ref_imagem")
+        val cursor = medTimeDB.query("medicamentos", columns, null, null, null, null, null)
+
+        cursor.moveToPosition(id)
+
+        return Medicamento(
+            cursor.getInt(0),
+            cursor.getString(1),
+            cursor.getInt(2).toByte()
+        )
+    }
+
     fun atualizarMedicamento(medicamento: Medicamento){
         val valores = ContentValues()
 

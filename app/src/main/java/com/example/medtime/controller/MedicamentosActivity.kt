@@ -3,9 +3,6 @@ package com.example.medtime.controller
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.View
-import androidx.core.view.isEmpty
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medtime.R
 import com.example.medtime.adapter.AdapterMedicamentos
@@ -43,7 +40,7 @@ class MedicamentosActivity : AppCompatActivity() {
    private fun listarMedicamentos(){
         val medicamentoDAO = MedicamentoDAO(this)
 
-        val reqCadastrados = binding.recyclerCadastrados
+        val reqCadastrados = binding.recyclerMedicamentos
         reqCadastrados.layoutManager = LinearLayoutManager(this)
         reqCadastrados.setHasFixedSize(false)
 
@@ -53,9 +50,7 @@ class MedicamentosActivity : AppCompatActivity() {
 
     private fun navegar(){
         val bottomBar = binding.bottomBar
-
         bottomBar.menu.findItem(R.id.medicamentos).isChecked = true
-
         bottomBar.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.medicamentos -> true

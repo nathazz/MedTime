@@ -11,6 +11,33 @@
     >
 
 
+    <TextView
+        android:id="@+id/unidadeMedida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ml"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deletarAgendamento"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toEndOf="@+id/txtHorario"
+        app:layout_constraintTop_toBottomOf="@+id/dtFinal"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <TextView
+        android:id="@+id/dosagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/unidadeMedida"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toEndOf="@+id/txtHorario"
+        app:layout_constraintTop_toBottomOf="@+id/dtFinal"
+        app:layout_constraintVertical_bias="0.029" />
 
     <ImageView
         android:id="@+id/fotoGota"
@@ -23,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titulo_med"
+        android:id="@+id/titulo_agendamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -49,7 +76,7 @@
         app:layout_constraintStart_toEndOf="@+id/fotoGota" />
 
     <ImageButton
-        android:id="@+id/editarMed"
+        android:id="@+id/editarAgendamento"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="4dp"
@@ -61,7 +88,7 @@
         app:srcCompat="@drawable/edit" />
 
     <ImageButton
-        android:id="@+id/deletarMed"
+        android:id="@+id/deletarAgendamento"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginEnd="16dp"
@@ -82,8 +109,10 @@
         android:text="10:00"
         android:textColor="@color/white"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fotoGota"
-        app:layout_constraintTop_toBottomOf="@+id/dtIncio" />
+        app:layout_constraintTop_toBottomOf="@+id/dtIncio"
+        app:layout_constraintVertical_bias="0.029" />
 
     <TextView
         android:id="@+id/textView12"
@@ -107,7 +136,7 @@
         android:textColor="@color/azul_clr"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/deletarMed"
+        app:layout_constraintEnd_toStartOf="@+id/deletarAgendamento"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView12" />
 

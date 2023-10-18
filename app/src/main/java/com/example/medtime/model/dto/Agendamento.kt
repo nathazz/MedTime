@@ -1,42 +1,44 @@
 package com.example.medtime.model.dto
 
+import java.io.Serializable
 import java.time.LocalTime
 import java.util.Date
 
 class Agendamento(
-    private var id : Int,
-    private var dataDeInicio : Date,
-    private var dataDoFim : Date,
-    private var horario : LocalTime,
-    private var medicamento : Medicamento,
-    private var unidadeDeMedida : String,
-    private var dosagem : Float
-) {
+    private var id: Int,
+    private var dataDeInicio: String,
+    private var dataDoFim: String,
+    private var horario: String,
+    private var medicamento: Medicamento,
+    private var unidadeDeMedida: String,
+    private var dosagem: Float
+
+) : Serializable {
     fun getId() : Int {
         return id
     }
 
-    fun getDataDeInicio() : Date {
+    fun getDataDeInicio() : String {
         return dataDeInicio
     }
 
-    fun setDataDeInicio(dataDeInicio : Date) {
+    fun setDataDeInicio(dataDeInicio : String) {
         this.dataDeInicio = dataDeInicio
     }
 
-    fun getDataDoFim() : Date {
+    fun getDataDoFim() : String {
         return dataDoFim
     }
 
-    fun setDataDoFim(dataDoFim : Date) {
+    fun setDataDoFim(dataDoFim : String) {
         this.dataDoFim = dataDoFim
     }
 
-    fun getHorario() : LocalTime {
+    fun getHorario() : String {
         return horario
     }
 
-    fun setHorario(horario : LocalTime) {
+    fun setHorario(horario : String) {
         this.horario = horario
     }
 

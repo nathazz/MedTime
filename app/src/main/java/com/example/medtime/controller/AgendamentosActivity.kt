@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medtime.R
 import com.example.medtime.adapter.AdapterAgendamento
 import com.example.medtime.databinding.ActivityAgendamentoBinding
-import com.example.medtime.model.dto.Agendamento
+import com.example.medtime.model.dao.AgendamentoDAO
 
 @Suppress("DEPRECATION")
 class AgendamentosActivity : AppCompatActivity() {
@@ -32,45 +32,39 @@ class AgendamentosActivity : AppCompatActivity() {
 
     }
 
-
    private fun listarAgendamentos() {
+       val agendamentoDAO = AgendamentoDAO(this)
 
-        val reMedicamentos = binding.recyclerMedicamentos
-        //lista na vertical
-        reMedicamentos.layoutManager = LinearLayoutManager(this)
-        reMedicamentos.setHasFixedSize(true)
+        val reqAgendamentos = binding.recyclerAgendamentos
+        reqAgendamentos.layoutManager = LinearLayoutManager(this)
+        reqAgendamentos.setHasFixedSize(false)
 
-
-        val listaAgendamento: MutableList<Agendamento> = mutableListOf()
-        val adapterAgendamento = AdapterAgendamento(this, listaAgendamento)
-
-        reMedicamentos.adapter = adapterAgendamento
-
+        reqAgendamentos.adapter = AdapterAgendamento(this, agendamentoDAO.listarAgendamentos().toMutableList())
     }
 
    private  fun navegar() {
-        val bottomBar = binding.bottomBar
+       val bottomBar = binding.bottomBar
        bottomBar.menu.findItem(R.id.agendamentos).isChecked = true
-
        bottomBar.setOnNavigationItemSelectedListener { menuItem ->
            when (menuItem.itemId) {
                R.id.agendamentos -> true
+
                R.id.inicio -> {
                    startActivity(Intent(this, MainActivity::class.java))
                    finish()
                    true
                }
+
                R.id.medicamentos -> {
                    startActivity(Intent(this, MedicamentosActivity::class.java))
                    finish()
                    true
                }
+
                else -> false
            }
        }
-
-
    }
 
-    }
+}
 

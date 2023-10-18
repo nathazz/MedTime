@@ -32,14 +32,12 @@ class AdapterMedicamentos(private val context : Context, private val medicamento
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicamentosViewHolder {
-
         val item = LayoutInflater.from(context).inflate(R.layout.medicamento_item, parent,false)
-
         return MedicamentosViewHolder(item)
     }
+
     override fun onBindViewHolder(holder: MedicamentosViewHolder, position: Int) {
         holder.foto.setImageResource(selecionarImagem(medicamentos[position].getImagem()))
-
         holder.nome.text = medicamentos[position].getNome()
 
         holder.deletar.setOnClickListener(View.OnClickListener {
@@ -76,15 +74,11 @@ class AdapterMedicamentos(private val context : Context, private val medicamento
     override fun getItemCount(): Int  = medicamentos.size
 
     inner  class MedicamentosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         val foto = itemView.findViewById<ImageView>(R.id.fotoGota2)
         val nome = itemView.findViewById<TextView>(R.id.txtNome)
+
         val deletar = itemView.findViewById<ImageView>(R.id.deletarCadastro)
         val editar = itemView.findViewById<ImageView>(R.id.editarCadastro)
-    }
-
-    private fun excluirMedicamento(){
-
     }
 
 }
