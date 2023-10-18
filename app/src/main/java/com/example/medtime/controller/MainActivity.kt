@@ -35,11 +35,13 @@ class MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.medicamentos -> {
                     startActivity(Intent(this, MedicamentosActivity::class.java))
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                     finish()
                     true
                 }
                 R.id.agendamentos -> {
                     startActivity(Intent(this, AgendamentosActivity::class.java))
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                     finish()
                     true
                 }
@@ -50,6 +52,8 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+
 
     }
 

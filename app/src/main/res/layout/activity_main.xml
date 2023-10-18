@@ -12,225 +12,89 @@
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="73dp"
-        app:menu="@menu/menu"
         android:background="@color/azul_escuro"
-        app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomBar"
-        />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/novoAgend"
         style="@style/btn_main"
+        android:layout_marginTop="104dp"
         android:backgroundTint="@color/roxo"
         android:drawableStart="@drawable/baseline_add_to_photos_24"
         android:text="Novo agendamento"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/medsCadastrados"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/medsCadastrados"
-        app:layout_constraintTop_toBottomOf="@+id/viewMain"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/fundo"
+        app:layout_constraintTop_toBottomOf="@+id/fundo" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/medsCadastrados"
         style="@style/btn_main"
+        android:layout_marginTop="44dp"
         android:backgroundTint="@color/azul_btn"
         android:drawableStart="@drawable/pilula2"
         android:text="Medicamentos cadastrados"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/meusAgend"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/meusAgend"
-        app:layout_constraintTop_toBottomOf="@+id/novoAgend"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintTop_toBottomOf="@+id/meusAgend"
         tools:ignore="HardcodedText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/meusAgend"
         style="@style/btn_main"
+        android:layout_marginTop="36dp"
         android:backgroundTint="@color/azul_btn"
         android:drawableStart="@drawable/baseline_checklist_24"
         android:text="Meus agendamentos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/medsCadastrados"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintEnd_toEndOf="@+id/novoAgend"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/novoAgend"
+        app:layout_constraintTop_toBottomOf="@+id/novoAgend" />
 
     <View
         android:id="@+id/fundo"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="245dp"
         android:background="@drawable/fundo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
-        android:id="@+id/clock"
-        android:layout_width="98dp"
-        android:layout_height="94dp"
-        android:importantForAccessibility="no"
-        android:src="@drawable/alarme"
-        app:layout_constraintBottom_toBottomOf="@+id/fundo"
+        android:id="@+id/imageView3"
+        android:layout_width="302dp"
+        android:layout_height="231dp"
         app:layout_constraintEnd_toEndOf="@+id/fundo"
-        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintHorizontal_bias="0.275"
         app:layout_constraintStart_toStartOf="@+id/fundo"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.335" />
+        app:srcCompat="@drawable/logomain" />
 
     <TextView
         android:id="@+id/boasVindas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:elevation="2dp"
         android:letterSpacing="0.1"
-        android:text="Seja bem vindo(a)"
+        android:text="@string/titulo_main"
         android:textColor="@color/white"
-        android:textSize="23sp"
-        android:textStyle="bold"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/fundo"
         app:layout_constraintEnd_toEndOf="@+id/fundo"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.679" />
-
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="295dp"
-        android:layout_height="200dp"
-        android:contentDescription="no"
-        android:src="@drawable/pill"
-        app:layout_constraintBottom_toBottomOf="@+id/fundo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        tools:ignore="HardcodedText" />
-
-    <View
-        android:id="@+id/viewMain"
-        android:layout_width="295dp"
-        android:layout_height="165dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="188dp"
-        android:background="@drawable/bg_container"
-        android:elevation="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fundo" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:letterSpacing="0.1"
-        android:text="Sua próxima medicação está \nagendada para"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/viewMain"
-        app:layout_constraintEnd_toEndOf="@+id/viewMain"
-        app:layout_constraintHorizontal_bias="0.169"
-        app:layout_constraintStart_toStartOf="@+id/viewMain"
-        app:layout_constraintTop_toTopOf="@+id/viewMain"
-        app:layout_constraintVertical_bias="0.096"
-        tools:ignore="HardcodedText" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardMain"
-        style="@style/card_main"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewMain"
-        app:layout_constraintEnd_toEndOf="@+id/viewMain"
-        app:layout_constraintStart_toStartOf="@+id/viewMain"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.071">
-
-        <TextView
-            android:id="@+id/txtDia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:letterSpacing="0.1"
-            android:text="Hoje"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtHoras"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
-            android:letterSpacing="0.1"
-            android:text="19:30"
-            android:textColor="@color/verde_clr"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtMed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="55dp"
-            android:letterSpacing="0.1"
-            android:text="Paracentamol"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtDosagem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="55dp"
-            android:letterSpacing="0.1"
-            android:text="50mg"
-            android:textColor="@color/azul_clr"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/btnEditar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="225dp"
-            android:layout_marginTop="1dp"
-            android:background="@color/azul_btn"
-            android:contentDescription="no"
-            app:srcCompat="@drawable/edit"
-            tools:ignore="HardcodedText" />
-
-        <ImageButton
-            android:id="@+id/btnExlcuir"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="225dp"
-            android:layout_marginTop="45dp"
-            android:background="@color/azul_btn"
-            android:contentDescription="no"
-            app:srcCompat="@drawable/lixo" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintVertical_bias="0.791" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,22 +7,17 @@
     android:background="@color/branco_esc"
     tools:context=".controller.MainActivity">
 
-
-
-
-
     <ImageView
         android:id="@+id/seta"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginTop="16dp"
         android:importantForAccessibility="no"
         android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nv_agend"
@@ -70,10 +65,12 @@
         style="@style/btn_cadastro"
         android:layout_marginTop="32dp"
         android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHora" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHora"
+        app:layout_constraintVertical_bias="0.054" />
 
     <TextView
         android:id="@+id/textView6"

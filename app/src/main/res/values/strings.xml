@@ -4,6 +4,11 @@
     <string name="_26_jun">26 jun</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titulo_main">
+        Seja
+        <b><font color="#C209FB79">bem vindo(a)</font></b>
+
+    </string>
 
 
 </resources>

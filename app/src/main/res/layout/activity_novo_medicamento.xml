@@ -81,8 +81,6 @@
         android:layout_marginEnd="64dp"
         android:background="@drawable/bg_tbn_imagens"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.741"
-        app:layout_constraintStart_toEndOf="@+id/viewCaixinha"
         app:layout_constraintTop_toBottomOf="@+id/viewInjecao" />
 
     <View
@@ -110,11 +108,10 @@
         android:layout_width="120dp"
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
+
         android:layout_marginEnd="64dp"
         android:background="@drawable/bg_tbn_imagens"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.741"
-        app:layout_constraintStart_toEndOf="@+id/viewCapsula"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <CheckBox

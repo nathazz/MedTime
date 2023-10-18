@@ -51,12 +51,14 @@ class AgendamentosActivity : AppCompatActivity() {
 
                R.id.inicio -> {
                    startActivity(Intent(this, MainActivity::class.java))
+                   overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                    finish()
                    true
                }
 
                R.id.medicamentos -> {
                    startActivity(Intent(this, MedicamentosActivity::class.java))
+                   overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                    finish()
                    true
                }
@@ -64,7 +66,12 @@ class AgendamentosActivity : AppCompatActivity() {
                else -> false
            }
        }
+
    }
 
-}
+
+       }
+
+
+
 
