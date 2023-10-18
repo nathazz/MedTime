@@ -11,14 +11,14 @@ import com.example.medtime.R
 import com.example.medtime.model.dto.Agendamento
 
 
-class AdapterAgendamento(private val contexto: Context, private val agendamentos: MutableList<Agendamento>) : RecyclerView.Adapter<AdapterAgendamento.MedicamentoViewHolder>() {
+class AdapterAgendamento(private val contexto: Context, private val agendamentos: MutableList<Agendamento>) : RecyclerView.Adapter<AdapterAgendamento.AgendamentosViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicamentoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgendamentosViewHolder {
         val item = LayoutInflater.from(contexto).inflate(R.layout.agendamento_item, parent, false)
-        return MedicamentoViewHolder(item)
+        return AgendamentosViewHolder(item)
     }
 
-    override fun onBindViewHolder(holder: MedicamentoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AgendamentosViewHolder, position: Int) {
         holder.nome.text = agendamentos[position].getMedicamento().getNome()
         holder.foto.setImageResource(agendamentos[position].getMedicamento().getImagem().toInt())
         holder.dataInicio.text = agendamentos[position].getDataDeInicio()
@@ -30,7 +30,7 @@ class AdapterAgendamento(private val contexto: Context, private val agendamentos
 
     override fun getItemCount(): Int = agendamentos.size
 
-    inner class  MedicamentoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class  AgendamentosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nome = itemView.findViewById<TextView>(R.id.titulo_agendamento)
         val foto = itemView.findViewById<ImageView>(R.id.fotoGota)
         val dataInicio = itemView.findViewById<TextView>(R.id.dtIncio)

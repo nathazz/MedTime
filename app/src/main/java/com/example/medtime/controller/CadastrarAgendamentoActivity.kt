@@ -17,20 +17,17 @@ import java.util.TimeZone
 
 @Suppress("DEPRECATION")
 class CadastrarAgendamentoActivity : AppCompatActivity() {
-
-
    private lateinit var binding: ActivityCadastrarBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+
         binding = ActivityCadastrarBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
         binding.seta.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-    }
-
+        }
 
         //selecionarData
         binding.dataInicio.setOnClickListener {
@@ -45,13 +42,10 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
         configurarSpinner()
         selecionarHorario()
 
-
-
-
     }
 
     /*Apenas um teste(mudar conforme o tempo)*/
-        private fun configurarSpinner(){
+    private fun configurarSpinner(){
 
             val drop = binding.spinMedicamento
             val drop2 = binding.spinMedida
@@ -60,7 +54,6 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
             val dosagem = arrayOf("Miligramas(mg)", "Militlitros(ml)","Unidades internacionais(UI)",
                                  "Microgramas (µg)", "Gramas(g)")
 
-            //chamando o text_drop para alterar a cor do fundo e do textp
             val adapter = ArrayAdapter<String>(this, R.layout.text_drop, medicamentos)
             adapter.setDropDownViewResource(R.layout.text_drop)
 
@@ -71,10 +64,10 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
             adapter2.setDropDownViewResource(R.layout.text_drop)
 
             drop2.adapter = adapter2
-        }
+    }
 
 
-        private fun selecionarData(view: View){
+    private fun selecionarData(view: View){
             val datePicker = Calendar.getInstance()
 
             val data = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
@@ -90,6 +83,7 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
                 } else if(view == binding.dataFinal) {
                     binding.dataFinal.text = simpleDateFormat.format(datePicker.time)
                 }
+
             }
 
             val datePickerDialog = DatePickerDialog(
@@ -101,40 +95,36 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
             )
 
             datePickerDialog.show()
+    }
+
+    private fun selecionarHorario() {
+
+        val txtHora = binding.txtHora
+
+        txtHora.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val timeZone = TimeZone.getTimeZone("America/Sao_Paulo")
+            cal.timeZone = timeZone
+
+            val timeSetListener =
+                TimePickerDialog.OnTimeSetListener { timePicker, hora, minuto ->
+                    cal.set(Calendar.HOUR_OF_DAY, hora)
+                    cal.set(Calendar.MINUTE, minuto)
+
+                    txtHora.text = SimpleDateFormat("HH:mm").format(cal.time)
+
+                }
+
+            TimePickerDialog(
+                this,
+                timeSetListener,
+                cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE),
+                true
+            ).show()
         }
-
-        private fun selecionarHorario() {
-
-            val txtHora = binding.txtHora
-
-            txtHora.setOnClickListener {
-
-                val cal = Calendar.getInstance()
-                val timeZone = TimeZone.getTimeZone("America/Sao_Paulo")
-                cal.timeZone = timeZone
-
-                val timeSetListener =
-                    TimePickerDialog.OnTimeSetListener { timePicker, hora, minuto ->
-                        cal.set(Calendar.HOUR_OF_DAY, hora)
-                        cal.set(Calendar.MINUTE, minuto)
-
-                        txtHora.text = SimpleDateFormat("HH:mm").format(cal.time)
-
-                    }
-                TimePickerDialog(
-                    this,
-                    timeSetListener,
-                    cal.get(Calendar.HOUR_OF_DAY),
-                    cal.get(Calendar.MINUTE),
-                    true
-                ).show()
-            }
-
-        }
-
-
-
-        }
+    }
+}
 
 
 
