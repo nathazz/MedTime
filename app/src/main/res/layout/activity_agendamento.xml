@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="73dp"
         app:menu="@menu/menu"
+        app:itemActiveIndicatorStyle="@style/Animation.Design.BottomSheetDialog"
         android:background="@color/azul_escuro"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
@@ -30,30 +31,30 @@
         app:layout_constraintTop_toBottomOf="@+id/agnd_cadastrados"
         tools:layout_editor_absoluteX="0dp" />
 
+
     <TextView
         android:id="@+id/agnd_cadastrados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:letterSpacing="0.1"
         android:text="Agendamentos cadastrados"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seta2" />
-
 
     <ImageView
         android:id="@+id/seta2"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

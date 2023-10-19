@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="73dp"
         android:background="@color/azul_escuro"
+        app:itemActiveIndicatorStyle="@style/Animation.Design.BottomSheetDialog"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +76,7 @@
         android:layout_width="302dp"
         android:layout_height="231dp"
         app:layout_constraintEnd_toEndOf="@+id/fundo"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="@+id/fundo"
         app:layout_constraintTop_toTopOf="@+id/fundo"
         app:srcCompat="@drawable/logomain" />
@@ -91,10 +92,9 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/fundo"
         app:layout_constraintEnd_toEndOf="@+id/fundo"
-        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fundo"
-        app:layout_constraintVertical_bias="0.791" />
+        app:layout_constraintVertical_bias="0.886" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

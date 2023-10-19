@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="73dp"
         app:menu="@menu/menu"
+        app:itemActiveIndicatorStyle="@style/Animation.Design.BottomSheetDialog"
         android:background="@color/azul_escuro"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
@@ -30,16 +31,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
     <ImageView
         android:id="@+id/flechaCadastrado"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:importantForAccessibility="no"
         android:src="@drawable/arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,17 +47,16 @@
         android:id="@+id/tituloMedCadastrados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:letterSpacing="0.1"
         android:text="Medicamentos cadastrados"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flechaCadastrado" />
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnFlutuanteCadastro"
