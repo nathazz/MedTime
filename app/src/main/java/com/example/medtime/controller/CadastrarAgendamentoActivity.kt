@@ -9,15 +9,17 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.medtime.R
 import com.example.medtime.databinding.ActivityCadastrarBinding
+import com.example.medtime.model.dao.MedicamentoDAO
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 import java.util.TimeZone
 
-
 @Suppress("DEPRECATION")
 class CadastrarAgendamentoActivity : AppCompatActivity() {
    private lateinit var binding: ActivityCadastrarBinding
+   private lateinit var medicamentoDAO: MedicamentoDAO
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         binding = ActivityCadastrarBinding.inflate(layoutInflater)
@@ -29,7 +31,6 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
             finish()
         }
 
-        //selecionarData
         binding.dataInicio.setOnClickListener {
             selecionarData(binding.dataInicio)
         }
@@ -38,34 +39,34 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
             selecionarData(binding.dataFinal)
         }
 
+        binding.btnSalvar.setOnClickListener{
+             binding.btnSalvar.text = binding.txtHora.text
+        }
 
-        configurarSpinner()
+
+        configurarSpinners()
         selecionarHorario()
 
     }
 
-    /*Apenas um teste(mudar conforme o tempo)*/
-    private fun configurarSpinner(){
+    private fun configurarSpinners(){
+            medicamentoDAO = MedicamentoDAO(this)
 
-            val drop = binding.spinMedicamento
-            val drop2 = binding.spinMedida
+            val dropMedicamentos = binding.spinMedicamento
+            val dropUnidadeMedida = binding.spinMedida
 
-            val medicamentos = arrayOf("Rivotril", "Colírio", "Dramin")
-            val dosagem = arrayOf("Miligramas(mg)", "Militlitros(ml)","Unidades internacionais(UI)",
-                                 "Microgramas (µg)", "Gramas(g)")
+            val dosagem = arrayOf("Miligramas(mg)", "Militlitros(ml)","Unidades internacionais(UI)", "Microgramas (µg)", "Gramas(g)")
 
-            val adapter = ArrayAdapter<String>(this, R.layout.text_drop, medicamentos)
-            adapter.setDropDownViewResource(R.layout.text_drop)
+            val adapterDropMed = ArrayAdapter<String>(this, R.layout.text_drop, medicamentoDAO.listarNomesMedicamentos())
+            adapterDropMed.setDropDownViewResource(R.layout.text_drop)
+            dropMedicamentos.adapter = adapterDropMed
 
-            // Defina o adapter no spinner
-            drop.adapter = adapter
+            val adapterDropUniMedida = ArrayAdapter<String>(this, R.layout.text_drop, dosagem)
+            adapterDropUniMedida.setDropDownViewResource(R.layout.text_drop)
+            dropUnidadeMedida.adapter = adapterDropUniMedida
 
-            val adapter2 = ArrayAdapter<String>(this, R.layout.text_drop, dosagem)
-            adapter2.setDropDownViewResource(R.layout.text_drop)
 
-            drop2.adapter = adapter2
     }
-
 
     private fun selecionarData(view: View){
             val datePicker = Calendar.getInstance()
@@ -75,7 +76,7 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
                 datePicker[Calendar.MONTH] = month
                 datePicker[Calendar.DAY_OF_MONTH] = dayOfMonth
 
-                val formato = "dd-MMMM-yyyy"
+                val formato = "dd/MM/yyyy"
                 val simpleDateFormat =  SimpleDateFormat(formato, Locale("pt", "br"))
 
                 if(view == binding.dataInicio) {
@@ -98,13 +99,10 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
     }
 
     private fun selecionarHorario() {
-
         val txtHora = binding.txtHora
 
         txtHora.setOnClickListener {
             val cal = Calendar.getInstance()
-            val timeZone = TimeZone.getTimeZone("America/Sao_Paulo")
-            cal.timeZone = timeZone
 
             val timeSetListener =
                 TimePickerDialog.OnTimeSetListener { timePicker, hora, minuto ->
@@ -122,6 +120,7 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
                 cal.get(Calendar.MINUTE),
                 true
             ).show()
+
         }
     }
 }

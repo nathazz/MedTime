@@ -37,6 +37,18 @@ class MedicamentoDAO(context: Context) {
         return listaMedicamentos
     }
 
+    fun listarNomesMedicamentos(): List<String>{
+        val listaNomes : MutableList<String> = ArrayList()
+        val columns = arrayOf("nome")
+        val cursor = medTimeDB.query("medicamentos", columns, null, null, null, null, null)
+
+        while(cursor.moveToNext()){
+            listaNomes.add(cursor.getString(0))
+        }
+
+        return listaNomes
+    }
+
     fun pegarMedicamentoPorId(id: Int): Medicamento {
         val columns = arrayOf("id", "nome", "ref_imagem")
         val cursor = medTimeDB.query("medicamentos", columns, null, null, null, null, null)
