@@ -174,4 +174,4 @@ class CadastrarMedicamentoActivity : AppCompatActivity() {
         finish()
     }
 
-  }
+}

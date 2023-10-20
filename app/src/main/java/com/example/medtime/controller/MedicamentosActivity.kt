@@ -13,6 +13,7 @@ import com.example.medtime.model.dao.MedicamentoDAO
 class MedicamentosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMedCadastradosBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         binding = ActivityMedCadastradosBinding.inflate(layoutInflater)
@@ -72,8 +73,6 @@ class MedicamentosActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
-
     }
 
 }

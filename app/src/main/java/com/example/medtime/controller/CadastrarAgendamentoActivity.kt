@@ -251,6 +251,7 @@ class CadastrarAgendamentoActivity : AppCompatActivity() {
         startActivity(Intent(this, AgendamentosActivity::class.java))
         finish()
     }
+
 }
 
 

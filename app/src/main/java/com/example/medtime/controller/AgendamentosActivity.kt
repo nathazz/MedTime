@@ -50,16 +50,6 @@ class AgendamentosActivity : AppCompatActivity() {
         reqAgendamentos.layoutManager = LinearLayoutManager(this)
         reqAgendamentos.setHasFixedSize(true)
 
-        var lista : MutableList<Agendamento> = arrayListOf(Agendamento(
-            1,
-            "10/20",
-            "10/20",
-            "10:20",
-            Medicamento(1, "teste", 2.toByte()),
-            "ml",
-            2.0f
-        ))
-
         reqAgendamentos.adapter = AdapterAgendamento(this, agendamentoDAO.listarAgendamentos().toMutableList())
     }
 
@@ -90,8 +80,7 @@ class AgendamentosActivity : AppCompatActivity() {
 
    }
 
-
-       }
+}
 
 
 

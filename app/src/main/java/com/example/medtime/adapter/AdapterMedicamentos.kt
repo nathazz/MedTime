@@ -13,7 +13,9 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.medtime.R
 import com.example.medtime.controller.CadastrarMedicamentoActivity
+import com.example.medtime.model.dao.AgendamentoDAO
 import com.example.medtime.model.dao.MedicamentoDAO
+import com.example.medtime.model.dto.Agendamento
 import com.example.medtime.model.dto.Medicamento
 
 class AdapterMedicamentos(private val context : Context, private val medicamentos: MutableList<Medicamento>): RecyclerView.Adapter<AdapterMedicamentos.MedicamentosViewHolder>() {
@@ -42,22 +44,33 @@ class AdapterMedicamentos(private val context : Context, private val medicamento
 
         holder.deletar.setOnClickListener(View.OnClickListener {
             val medicamentoDAO = MedicamentoDAO(context)
+            val agendamentoDAO = AgendamentoDAO(context)
 
-            AlertDialog.Builder(context)
-                .setTitle("Excluir Medicamento")
-                .setMessage("Deseja excluir o medicamento ${medicamentos[position].getNome()}?")
-                .setPositiveButton("Sim") { dialog, which ->
+            if(agendamentoDAO.encontrarMedicamento(medicamentos[position])) {
+                Toast.makeText(
+                    context,
+                    "Não é possível deletar o medicamento pois ele está agendado",
+                    Toast.LENGTH_SHORT
+                ).show()
 
-                    medicamentoDAO.excluirMedicamento(medicamentos[position])
-                    medicamentos.removeAt(position)
-                    notifyItemRemoved(position)
-                    notifyItemRangeChanged(position, medicamentos.size)
+            } else {
+                AlertDialog.Builder(context)
+                    .setTitle("Excluir Medicamento")
+                    .setMessage("Deseja excluir o medicamento ${medicamentos[position].getNome()}?")
+                    .setPositiveButton("Sim") { dialog, which ->
 
-                    Toast.makeText(context, "Medicamento excluído com sucesso!", Toast.LENGTH_SHORT).show()
+                        medicamentoDAO.excluirMedicamento(medicamentos[position])
+                        medicamentos.removeAt(position)
+                        notifyItemRemoved(position)
+                        notifyItemRangeChanged(position, medicamentos.size)
 
-                }
-                .setNegativeButton("Não", null)
-                .show()
+                        Toast.makeText(context, "Medicamento excluído com sucesso!", Toast.LENGTH_SHORT).show()
+
+                    }
+                    .setNegativeButton("Não", null)
+                    .show()
+            }
+
 
         })
 

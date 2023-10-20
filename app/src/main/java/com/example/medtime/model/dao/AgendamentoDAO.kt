@@ -63,4 +63,18 @@ class AgendamentoDAO(context : Context) {
     fun excluirAgendamento(agendamento: Agendamento){
         medTimeDB.delete("agendamentos", "id = ?", arrayOf(agendamento.getId().toString()))
     }
+
+    fun encontrarMedicamento(medicamento: Medicamento): Boolean {
+        val columns = arrayOf("id", "data_inicio", "data_final", "unidade_de_medida", "dosagem", "horario", "fk_medicamento_id")
+        val cursor = medTimeDB.query("agendamentos", columns, null, null, null, null, null)
+
+        while(cursor.moveToNext()){
+            if(cursor.getInt(6) == medicamento.getId()) {
+                return true
+            }
+        }
+
+        return false
+    }
+
 }
