@@ -19,11 +19,11 @@ class ConexaoDB(context : Context) : SQLiteOpenHelper(context, NAME,null, VERSIO
 
         medtime_db.execSQL("CREATE TABLE IF NOT EXISTS agendamentos (\n" +
                 "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
-                "    data_inicio VARCHAR(11) NOT NULL,\n" +
-                "    data_final VARCHAR(11) NOT NULL,\n" +
-                "    unidade_de_medida VARCHAR(15) NOT NULL,\n" +
+                "    data_inicio VARCHAR(20) NOT NULL,\n" +
+                "    data_final VARCHAR(20) NOT NULL,\n" +
+                "    unidade_de_medida VARCHAR(20) NOT NULL,\n" +
                 "    dosagem FLOAT NOT NULL,\n" +
-                "    horario VARCHAR(6) NOT NULL,\n" +
+                "    horario VARCHAR(20) NOT NULL,\n" +
                 "    fk_medicamento_id INTEGER NOT NULL,\n" +
                 "    FOREIGN KEY (fk_medicamento_id) REFERENCES medicamentos(id)\n" +
                 ");\n")

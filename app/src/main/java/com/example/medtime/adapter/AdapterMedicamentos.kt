@@ -73,7 +73,7 @@ class AdapterMedicamentos(private val context : Context, private val medicamento
 
     override fun getItemCount(): Int  = medicamentos.size
 
-    inner  class MedicamentosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MedicamentosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val foto = itemView.findViewById<ImageView>(R.id.fotoGota2)
         val nome = itemView.findViewById<TextView>(R.id.txtNome)
 

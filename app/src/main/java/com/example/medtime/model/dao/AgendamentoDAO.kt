@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import com.example.medtime.model.DataBase.ConexaoDB
 import com.example.medtime.model.dto.Agendamento
+import com.example.medtime.model.dto.Medicamento
 
 class AgendamentoDAO(context : Context) {
     private val conexaoDB : ConexaoDB = ConexaoDB(context)

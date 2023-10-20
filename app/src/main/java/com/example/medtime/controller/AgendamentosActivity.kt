@@ -10,6 +10,8 @@ import com.example.medtime.adapter.AdapterAgendamento
 import com.example.medtime.databinding.ActivityAgendamentoBinding
 import com.example.medtime.model.dao.AgendamentoDAO
 import com.example.medtime.model.dao.MedicamentoDAO
+import com.example.medtime.model.dto.Agendamento
+import com.example.medtime.model.dto.Medicamento
 
 @Suppress("DEPRECATION")
 class AgendamentosActivity : AppCompatActivity() {
@@ -42,16 +44,26 @@ class AgendamentosActivity : AppCompatActivity() {
     }
 
    private fun listarAgendamentos() {
-       val agendamentoDAO = AgendamentoDAO(this)
+        val agendamentoDAO = AgendamentoDAO(this@AgendamentosActivity)
 
         val reqAgendamentos = binding.recyclerAgendamentos
         reqAgendamentos.layoutManager = LinearLayoutManager(this)
-        reqAgendamentos.setHasFixedSize(false)
+        reqAgendamentos.setHasFixedSize(true)
+
+        var lista : MutableList<Agendamento> = arrayListOf(Agendamento(
+            1,
+            "10/20",
+            "10/20",
+            "10:20",
+            Medicamento(1, "teste", 2.toByte()),
+            "ml",
+            2.0f
+        ))
 
         reqAgendamentos.adapter = AdapterAgendamento(this, agendamentoDAO.listarAgendamentos().toMutableList())
     }
 
-   private  fun navegar() {
+   private fun navegar() {
        val bottomBar = binding.bottomBar
        bottomBar.menu.findItem(R.id.agendamentos).isChecked = true
        bottomBar.setOnNavigationItemSelectedListener { menuItem ->

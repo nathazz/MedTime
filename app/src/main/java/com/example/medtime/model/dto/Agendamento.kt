@@ -5,7 +5,7 @@ import java.time.LocalTime
 import java.util.Date
 
 class Agendamento(
-    private var id: Int,
+    private var id: Int?,
     private var dataDeInicio: String,
     private var dataDoFim: String,
     private var horario: String,
@@ -14,7 +14,7 @@ class Agendamento(
     private var dosagem: Float
 
 ) : Serializable {
-    fun getId() : Int {
+    fun getId() : Int? {
         return id
     }
 

@@ -52,14 +52,39 @@ class MedicamentoDAO(context: Context) {
     fun pegarMedicamentoPorId(id: Int): Medicamento {
         val columns = arrayOf("id", "nome", "ref_imagem")
         val cursor = medTimeDB.query("medicamentos", columns, null, null, null, null, null)
+        lateinit var medicamento : Medicamento
 
-        cursor.moveToPosition(id)
+        while (cursor.moveToNext()){
+            if(cursor.getInt(0) == id){
+                medicamento = Medicamento(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getInt(2).toByte()
+                )
+                break
+            }
+        }
 
-        return Medicamento(
-            cursor.getInt(0),
-            cursor.getString(1),
-            cursor.getInt(2).toByte()
-        )
+        return medicamento
+    }
+
+    fun pegarMedicamentoPorNome(nome : String): Medicamento {
+        val columns = arrayOf("id", "nome", "ref_imagem")
+        val cursor = medTimeDB.query("medicamentos", columns, null, null, null, null, null)
+        lateinit var medicamento : Medicamento
+
+        while(cursor.moveToNext()){
+            if(cursor.getString(1) == nome){
+                medicamento = Medicamento(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getInt(2).toByte()
+                )
+                break
+            }
+        }
+
+        return medicamento
     }
 
     fun atualizarMedicamento(medicamento: Medicamento){
